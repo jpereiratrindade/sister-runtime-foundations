@@ -1,0 +1,254 @@
+{
+  "candidate_learning_proposals": [
+    {
+      "authority_boundary": "Machine generation proposes; it does not adopt a project or Praxis rule.",
+      "evidence_references": [
+        "praxis-identity-after-validator.json",
+        "praxis-identity-before-validator.json"
+      ],
+      "governance_adoption": "NONE",
+      "id": "RF-A0-CL01",
+      "interpretation_required": true,
+      "proposal": "Material external identities should be observed from the dependency instance actually used, not asserted in project source.",
+      "status": "CANDIDATE",
+      "supported_by_predictions": [
+        "RF-A0-E01"
+      ]
+    },
+    {
+      "authority_boundary": "Machine generation proposes; it does not adopt a project or Praxis rule.",
+      "evidence_references": [
+        "action-ctest.txt",
+        "tests/epistemic_model_test.py"
+      ],
+      "governance_adoption": "NONE",
+      "id": "RF-A0-CL02",
+      "interpretation_required": true,
+      "proposal": "Reflexive run records should preserve independent comparisons, operational anomaly capture, and evidence-dependent non-governing learning proposals.",
+      "status": "CANDIDATE",
+      "supported_by_predictions": [
+        "RF-A0-E02",
+        "RF-A0-E03",
+        "RF-A0-E04"
+      ]
+    },
+    {
+      "authority_boundary": "Machine generation proposes; it does not adopt a project or Praxis rule.",
+      "evidence_references": [
+        ".hoa/protocols/index.json",
+        "governance/historical-evidence-prefix.json",
+        "historical-integrity.json",
+        "protocol-archive-validation.json",
+        "protocol-snapshot.json"
+      ],
+      "governance_adoption": "NONE",
+      "id": "RF-A0-CL03",
+      "interpretation_required": true,
+      "proposal": "Digest commitments require recoverable content snapshots when Git history or an external archive is absent.",
+      "status": "CANDIDATE",
+      "supported_by_predictions": [
+        "RF-A0-E05"
+      ]
+    },
+    {
+      "authority_boundary": "Machine generation proposes; it does not adopt a project or Praxis rule.",
+      "evidence_references": [
+        "action-praxis-validator.txt",
+        "praxis-identity-before-validator.json",
+        "praxis-validator.json"
+      ],
+      "governance_adoption": "NONE",
+      "id": "RF-A0-CL04",
+      "interpretation_required": true,
+      "proposal": "The Praxis bootstrap representation gap remains a candidate for separate Praxis evaluation under the exact observed Praxis identity.",
+      "status": "CANDIDATE",
+      "supported_by_predictions": [
+        "RF-A0-H06"
+      ]
+    }
+  ],
+  "epistemic_conclusion": "MIXED_OR_INCONCLUSIVE",
+  "governance_adoption": [],
+  "machine_interpretation_status": "PROPOSALS_ONLY",
+  "observation_layer": "gate-results.json and raw evidence artifacts",
+  "prediction_comparisons": [
+    {
+      "causal_boundary": "Only declared relevant checks contribute; global gate status is not an input.",
+      "comparison": "SUPPORTED",
+      "evidence_references": [
+        "praxis-identity-after-validator.json",
+        "praxis-identity-before-validator.json"
+      ],
+      "missing_check_ids": [],
+      "prediction_id": "RF-A0-E01",
+      "relevant_checks": [
+        {
+          "check_id": "RF-A0.PRAXIS.IDENTITY_OBSERVED",
+          "contradicting_results": [
+            "FAIL"
+          ],
+          "evidence": [
+            "praxis-identity-before-validator.json",
+            "praxis-identity-after-validator.json"
+          ],
+          "observed_result": "PASS",
+          "supporting_results": [
+            "PASS"
+          ]
+        }
+      ]
+    },
+    {
+      "causal_boundary": "Only declared relevant checks contribute; global gate status is not an input.",
+      "comparison": "SUPPORTED",
+      "evidence_references": [
+        "action-ctest.txt",
+        "tests/epistemic_model_test.py"
+      ],
+      "missing_check_ids": [],
+      "prediction_id": "RF-A0-E02",
+      "relevant_checks": [
+        {
+          "check_id": "RF-A0.EPISTEMIC.COMPARISON_MODEL",
+          "contradicting_results": [
+            "FAIL"
+          ],
+          "evidence": [
+            "action-ctest.txt",
+            "tests/epistemic_model_test.py"
+          ],
+          "observed_result": "PASS",
+          "supporting_results": [
+            "PASS"
+          ]
+        }
+      ]
+    },
+    {
+      "causal_boundary": "Only declared relevant checks contribute; global gate status is not an input.",
+      "comparison": "SUPPORTED",
+      "evidence_references": [
+        "action-ctest.txt",
+        "tests/epistemic_model_test.py"
+      ],
+      "missing_check_ids": [],
+      "prediction_id": "RF-A0-E03",
+      "relevant_checks": [
+        {
+          "check_id": "RF-A0.EPISTEMIC.UNEXPECTED_CHANNEL",
+          "contradicting_results": [
+            "FAIL"
+          ],
+          "evidence": [
+            "action-ctest.txt",
+            "tests/epistemic_model_test.py"
+          ],
+          "observed_result": "PASS",
+          "supporting_results": [
+            "PASS"
+          ]
+        }
+      ]
+    },
+    {
+      "causal_boundary": "Only declared relevant checks contribute; global gate status is not an input.",
+      "comparison": "SUPPORTED",
+      "evidence_references": [
+        "action-ctest.txt",
+        "tests/epistemic_model_test.py"
+      ],
+      "missing_check_ids": [],
+      "prediction_id": "RF-A0-E04",
+      "relevant_checks": [
+        {
+          "check_id": "RF-A0.EPISTEMIC.LEARNING_BOUNDARY",
+          "contradicting_results": [
+            "FAIL"
+          ],
+          "evidence": [
+            "action-ctest.txt",
+            "tests/epistemic_model_test.py"
+          ],
+          "observed_result": "PASS",
+          "supporting_results": [
+            "PASS"
+          ]
+        }
+      ]
+    },
+    {
+      "causal_boundary": "Only declared relevant checks contribute; global gate status is not an input.",
+      "comparison": "SUPPORTED",
+      "evidence_references": [
+        ".hoa/protocols/index.json",
+        "governance/historical-evidence-prefix.json",
+        "historical-integrity.json",
+        "protocol-archive-validation.json",
+        "protocol-snapshot.json"
+      ],
+      "missing_check_ids": [],
+      "prediction_id": "RF-A0-E05",
+      "relevant_checks": [
+        {
+          "check_id": "RF-A0.EPISTEMIC.PROTOCOL_ARCHIVE",
+          "contradicting_results": [
+            "FAIL"
+          ],
+          "evidence": [
+            "protocol-archive-validation.json",
+            ".hoa/protocols/index.json",
+            "protocol-snapshot.json"
+          ],
+          "observed_result": "PASS",
+          "supporting_results": [
+            "PASS"
+          ]
+        },
+        {
+          "check_id": "RF-A0.HISTORY.PREFIX_IMMUTABLE",
+          "contradicting_results": [
+            "FAIL"
+          ],
+          "evidence": [
+            "historical-integrity.json",
+            "governance/historical-evidence-prefix.json"
+          ],
+          "observed_result": "PASS",
+          "supporting_results": [
+            "PASS"
+          ]
+        }
+      ]
+    },
+    {
+      "causal_boundary": "Only declared relevant checks contribute; global gate status is not an input.",
+      "comparison": "SUPPORTED",
+      "evidence_references": [
+        "action-praxis-validator.txt",
+        "praxis-identity-before-validator.json",
+        "praxis-validator.json"
+      ],
+      "missing_check_ids": [],
+      "prediction_id": "RF-A0-H06",
+      "relevant_checks": [
+        {
+          "check_id": "RF-A0.PRAXIS.BOOTSTRAP_GAP",
+          "contradicting_results": [
+            "FAIL",
+            "UNEXPECTED_PASS"
+          ],
+          "evidence": [
+            "action-praxis-validator.txt",
+            "praxis-validator.json",
+            "praxis-identity-before-validator.json"
+          ],
+          "observed_result": "EXPECTED_FAIL_CLOSED",
+          "supporting_results": [
+            "EXPECTED_FAIL_CLOSED"
+          ]
+        }
+      ]
+    }
+  ],
+  "unexpected_observations": "unexpected-observations.json"
+}

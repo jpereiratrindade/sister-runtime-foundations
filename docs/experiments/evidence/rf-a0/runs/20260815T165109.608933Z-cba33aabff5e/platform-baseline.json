@@ -1,0 +1,25 @@
+{
+  "captured_at_utc": "2026-08-15T16:51:12.200340+00:00",
+  "claim_boundary": "This identifies the userspace, kernel, libc, and toolchain of this run; it does not generalize observed behavior to every Fedora release or Linux environment.",
+  "cmake": "cmake version 4.3.0",
+  "compiler": {
+    "compiler": "/usr/bin/c++",
+    "compiler_id": "GNU",
+    "compiler_version": "16.1.1"
+  },
+  "distribution": {
+    "id": "fedora",
+    "name": "Fedora Linux",
+    "pretty_name": "Fedora Linux 44 (Workstation Edition)",
+    "source": "/etc/os-release",
+    "version_id": "44"
+  },
+  "glibc": "glibc 2.43",
+  "kernel_release": "7.1.6-201.fc44.x86_64",
+  "machine_architecture": "x86_64",
+  "python": {
+    "executable": "/usr/bin/python3",
+    "implementation": "CPython",
+    "version": "3.14.6"
+  }
+}

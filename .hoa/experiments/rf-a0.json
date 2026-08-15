@@ -1,0 +1,84 @@
+{
+  "schema": "praxis-governed-experiment/0.1",
+  "experiment": {
+    "id": "RF-A0",
+    "title": "Native Linux Process",
+    "phase": "RF-A0",
+    "status": "active",
+    "question": "What is a SisTer-class application process from the Linux kernel's point of view before project-created isolation exists?",
+    "scope": [
+      "a newly authored C++23 native process probe",
+      "host observation through Linux /proc interfaces",
+      "an explicitly loopback-bound TCP listener",
+      "signal-driven controlled shutdown"
+    ],
+    "out_of_scope": [
+      "RF-A1 through RF-A9",
+      "manually created isolation boundaries",
+      "privileged or persistent host mutation",
+      "verified SisTer deployment requirements"
+    ]
+  },
+  "authority": {
+    "authorized_milestones": ["RF-A0"],
+    "unauthorized_milestones": [
+      "RF-A1",
+      "RF-A2",
+      "RF-A3",
+      "RF-A4",
+      "RF-A5",
+      "RF-A6",
+      "RF-A7",
+      "RF-A8",
+      "RF-A9"
+    ]
+  },
+  "inputs": [
+    {
+      "role": "bootstrap_mission",
+      "path": "governance/inputs/001-bootstrap-mission.md",
+      "sha256": "2e3939fd0c5768efcd7c347fd3d25a29194aff1aa3503a04741ed5971b24b3ee"
+    },
+    {
+      "role": "epistemic_addendum",
+      "path": "governance/inputs/002-epistemic-learning-loop.md",
+      "sha256": "9e5b1755d197bdb156020cec307c3be288e06bb3ff9f363c86d92051862f59fe"
+    },
+    {
+      "role": "hardening_mission",
+      "path": "governance/inputs/003-rf-a0-hardening-mission.md",
+      "sha256": "641b4a2c695d38be5243052e883de2d2dd3426d9428af6e6ae2dd842aa6b99b5"
+    },
+    {
+      "role": "bounded_autonomy_addendum",
+      "path": "governance/inputs/004-reflexive-bounded-autonomy.md",
+      "sha256": "c732d96677966dec367674654072842d51c7beac5eb13cef19fe00fe805cb249"
+    },
+    {
+      "role": "epistemic_closure_audit",
+      "path": "governance/inputs/005-rf-a0-epistemic-closure-audit.md",
+      "sha256": "cd0c7abf2bd3868f02d7ecd4be97e2482c3b69a8b3741a7bf4f650dd6d7f4724"
+    }
+  ],
+  "pre_observation_protocol": {
+    "path": ".hoa/protocols/rf-a0-pre-observation.json",
+    "digest_algorithm": "sha256",
+    "claim_boundary": "The per-run commitment establishes ordering only within the orchestrated run."
+  },
+  "epistemic_closure_protocol": {
+    "path": ".hoa/protocols/rf-a0-epistemic-closure.json",
+    "sha256": "eaacf6cf294813252c044515ebd1298d64454a53a59d8320dde2519052783742",
+    "claim_boundary": "Prospective closure-audit runs only; historical runs remain associated with the earlier digest."
+  },
+  "verification": {
+    "gate": "scripts/verify_rf_a0.py"
+  },
+  "outputs": {
+    "evidence": "docs/experiments/evidence/rf-a0/verification.txt",
+    "ledger": "docs/experiments/evidence/rf-a0/ledger.json",
+    "machine_results": "docs/experiments/evidence/rf-a0/latest-run.json",
+    "post_observation_learning": ".hoa/learning/rf-a0.json",
+    "tests": ["tests/runtime_probe_integration.py"]
+  },
+  "claim_boundary": "RF-A0 can establish only the behavior observed for an ordinary child process in the execution environment. It cannot establish isolation, container behavior, or SisTer deployment requirements."
+}

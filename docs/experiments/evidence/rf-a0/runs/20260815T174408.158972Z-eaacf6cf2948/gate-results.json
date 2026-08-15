@@ -1,0 +1,351 @@
+{
+  "artifact": "srf-machine-readable-gate-results/0.1",
+  "checks": [
+    {
+      "evidence": ".hoa/protocols/rf-a0-epistemic-closure.json",
+      "failure_reason": null,
+      "id": "RF-A0.EPISTEMIC.PROTOCOL",
+      "property": "pre-observation protocol is separate and observation-free",
+      "result": "PASS"
+    },
+    {
+      "evidence": "commitment.json",
+      "failure_reason": null,
+      "id": "RF-A0.EPISTEMIC.DIGEST",
+      "property": "protocol digest is SHA-256 over the committed bytes",
+      "result": "PASS"
+    },
+    {
+      "evidence": ".hoa/learning/rf-a0.json",
+      "failure_reason": null,
+      "id": "RF-A0.EPISTEMIC.SYNTHESIS",
+      "property": "post-observation learning is separate, complete, and linked to the protocol",
+      "result": "PASS"
+    },
+    {
+      "evidence": ".hoa/learning/candidates/praxis-bootstrap-representation-gap.json",
+      "failure_reason": null,
+      "id": "RF-A0.LEARNING.PRAXIS_CANDIDATE",
+      "property": "Praxis bootstrap gap remains a project-local candidate without adoption authority",
+      "result": "PASS"
+    },
+    {
+      "evidence": "protocol-archive-validation.json;.hoa/protocols/index.json;protocol-snapshot.json",
+      "failure_reason": null,
+      "id": "RF-A0.EPISTEMIC.PROTOCOL_ARCHIVE",
+      "property": "historical and current protocol bytes are content-addressed and the run snapshot agrees",
+      "result": "PASS"
+    },
+    {
+      "evidence": "historical-integrity.json;governance/historical-evidence-prefix.json",
+      "failure_reason": null,
+      "id": "RF-A0.HISTORY.PREFIX_IMMUTABLE",
+      "property": "the original three-run chain and all 93 historical files are byte-identical",
+      "result": "PASS"
+    },
+    {
+      "evidence": ".hoa/project-state.yaml",
+      "failure_reason": null,
+      "id": "RF-A0.GOVERNANCE.SCHEMA",
+      "property": "canonical state conforms to the current Praxis schema",
+      "result": "PASS"
+    },
+    {
+      "evidence": ".hoa/experiments/rf-a0.json",
+      "failure_reason": null,
+      "id": "RF-A0.EXPERIMENT.SCHEMA",
+      "property": "RF-A0 record conforms to the current Praxis experiment schema",
+      "result": "PASS"
+    },
+    {
+      "evidence": ".hoa/project-state.yaml;.hoa/experiments/rf-a0.json",
+      "failure_reason": null,
+      "id": "RF-A0.GOVERNANCE.STATE",
+      "property": "RF-A0 remains active and is not promoted",
+      "result": "PASS"
+    },
+    {
+      "evidence": ".hoa/project-state.yaml",
+      "failure_reason": null,
+      "id": "RF-A0.GOVERNANCE.NO_PRIOR_VERIFICATION",
+      "property": "all last-verified fields use honest pre-history sentinels",
+      "result": "PASS"
+    },
+    {
+      "evidence": ".hoa/experiments/rf-a0.json",
+      "failure_reason": null,
+      "id": "RF-A0.GOVERNANCE.AUTHORITY",
+      "property": "only RF-A0 is authorized and RF-A1 through RF-A9 are unauthorized",
+      "result": "PASS"
+    },
+    {
+      "evidence": "governance/inputs/001-bootstrap-mission.md",
+      "failure_reason": null,
+      "id": "RF-A0.INPUT.BOOTSTRAP_MISSION",
+      "property": "constitutive input is project-relative and digest-valid",
+      "result": "PASS"
+    },
+    {
+      "evidence": "governance/inputs/002-epistemic-learning-loop.md",
+      "failure_reason": null,
+      "id": "RF-A0.INPUT.EPISTEMIC_ADDENDUM",
+      "property": "constitutive input is project-relative and digest-valid",
+      "result": "PASS"
+    },
+    {
+      "evidence": "governance/inputs/003-rf-a0-hardening-mission.md",
+      "failure_reason": null,
+      "id": "RF-A0.INPUT.HARDENING_MISSION",
+      "property": "constitutive input is project-relative and digest-valid",
+      "result": "PASS"
+    },
+    {
+      "evidence": "governance/inputs/004-reflexive-bounded-autonomy.md",
+      "failure_reason": null,
+      "id": "RF-A0.INPUT.BOUNDED_AUTONOMY_ADDENDUM",
+      "property": "constitutive input is project-relative and digest-valid",
+      "result": "PASS"
+    },
+    {
+      "evidence": "governance/inputs/005-rf-a0-epistemic-closure-audit.md",
+      "failure_reason": null,
+      "id": "RF-A0.INPUT.EPISTEMIC_CLOSURE_AUDIT",
+      "property": "constitutive input is project-relative and digest-valid",
+      "result": "PASS"
+    },
+    {
+      "evidence": "governance/execution-authority.json;scripts/execution_authority.py",
+      "failure_reason": null,
+      "id": "RF-A0.AUTHORITY.ALLOWLIST",
+      "property": "declared external-execution roles equal the implemented allowlist",
+      "result": "PASS"
+    },
+    {
+      "evidence": "scripts/*.py;tests/*.py",
+      "failure_reason": null,
+      "id": "RF-A0.AUTHORITY.CALL_SITES",
+      "property": "all project subprocess creation is centralized and shell-free",
+      "result": "PASS"
+    },
+    {
+      "evidence": "project tree",
+      "failure_reason": null,
+      "id": "RF-A0.SCOPE.ARTIFACTS",
+      "property": "no forbidden deployment manifest exists",
+      "result": "PASS"
+    },
+    {
+      "evidence": "CMakeLists.txt;src/runtime_probe.cpp",
+      "failure_reason": null,
+      "id": "RF-A0.SCOPE.IMPLEMENTATION",
+      "property": "native probe and build contain no later-milestone mechanism",
+      "result": "PASS"
+    },
+    {
+      "evidence": "os.geteuid",
+      "failure_reason": null,
+      "id": "RF-A0.SCOPE.UNPRIVILEGED",
+      "property": "gate executes without root privileges",
+      "result": "PASS"
+    },
+    {
+      "evidence": "action-git-remote.txt",
+      "failure_reason": null,
+      "id": "RF-A0.GIT.NO_REMOTE",
+      "property": "Git has no configured remote",
+      "result": "PASS"
+    },
+    {
+      "evidence": "action-git-head.txt",
+      "failure_reason": null,
+      "id": "RF-A0.GIT.NO_COMMIT",
+      "property": "repository still has no commit",
+      "result": "PASS"
+    },
+    {
+      "evidence": "action-cmake-version.txt",
+      "failure_reason": null,
+      "id": "RF-A0.BUILD.CMAKE_VERSION",
+      "property": "CMake version query succeeds",
+      "result": "PASS"
+    },
+    {
+      "evidence": ".build/runs/20260815T174408.158972Z-eaacf6cf2948",
+      "failure_reason": null,
+      "id": "RF-A0.BUILD.CLEAN_DIRECTORY",
+      "property": "decisive run starts with a new build directory",
+      "result": "PASS"
+    },
+    {
+      "evidence": "action-configure.txt",
+      "failure_reason": null,
+      "id": "RF-A0.BUILD.CONFIGURE",
+      "property": "clean CMake configure succeeds",
+      "result": "PASS"
+    },
+    {
+      "evidence": "action-build.txt",
+      "failure_reason": null,
+      "id": "RF-A0.BUILD.CXX23",
+      "property": "C++23 warnings-as-errors build succeeds",
+      "result": "PASS"
+    },
+    {
+      "evidence": "platform-baseline.json",
+      "failure_reason": null,
+      "id": "RF-A0.PLATFORM.FEDORA",
+      "property": "decisive platform identifies a Fedora userspace",
+      "result": "PASS"
+    },
+    {
+      "evidence": "platform-baseline.json",
+      "failure_reason": null,
+      "id": "RF-A0.PLATFORM.COMPLETE",
+      "property": "distribution, kernel, architecture, libc, compiler, CMake, and Python are recorded",
+      "result": "PASS"
+    },
+    {
+      "evidence": "toolchain-baseline.json",
+      "failure_reason": null,
+      "id": "RF-A0.TOOLCHAIN.CXX23_COMMAND",
+      "property": "actual probe compile command requests C++23 and warnings as errors",
+      "result": "PASS"
+    },
+    {
+      "evidence": "action-ctest.txt",
+      "failure_reason": null,
+      "id": "RF-A0.TEST.CTEST",
+      "property": "CTest integration and repeated signal exercise pass",
+      "result": "PASS"
+    },
+    {
+      "evidence": "action-ctest.txt;tests/epistemic_model_test.py",
+      "failure_reason": null,
+      "id": "RF-A0.EPISTEMIC.COMPARISON_MODEL",
+      "property": "focused tests demonstrate independent supported, contradicted, and inconclusive comparisons",
+      "result": "PASS"
+    },
+    {
+      "evidence": "action-ctest.txt;tests/epistemic_model_test.py",
+      "failure_reason": null,
+      "id": "RF-A0.EPISTEMIC.UNEXPECTED_CHANNEL",
+      "property": "focused tests demonstrate empty normal and populated anomalous observation channels",
+      "result": "PASS"
+    },
+    {
+      "evidence": "action-ctest.txt;tests/epistemic_model_test.py",
+      "failure_reason": null,
+      "id": "RF-A0.EPISTEMIC.LEARNING_BOUNDARY",
+      "property": "focused tests suppress unsupported learning and preserve non-adoption authority",
+      "result": "PASS"
+    },
+    {
+      "evidence": "action-runtime-observation.txt",
+      "failure_reason": null,
+      "id": "RF-A0.RUNTIME.COLLECTOR",
+      "property": "decisive runtime collector succeeds",
+      "result": "PASS"
+    },
+    {
+      "evidence": "commitment.json;protocol-snapshot.json;observation.json",
+      "failure_reason": null,
+      "id": "RF-A0.EPISTEMIC.ORDER",
+      "property": "committed protocol predates decisive runtime observation and digest agrees",
+      "result": "PASS"
+    },
+    {
+      "evidence": "observation.json;proc-status.txt;probe-stdout.txt",
+      "failure_reason": null,
+      "id": "RF-A0.PROCESS.IDENTITY",
+      "property": "process identity and executable are correlated through procfs",
+      "result": "PASS"
+    },
+    {
+      "evidence": "observation.json;proc-fd.txt",
+      "failure_reason": null,
+      "id": "RF-A0.FILE.OPEN_FD",
+      "property": "retained regular file descriptor is externally correlated",
+      "result": "PASS"
+    },
+    {
+      "evidence": "observation.json;proc-net-tcp-listener.txt",
+      "failure_reason": null,
+      "id": "RF-A0.NET.LOOPBACK_LISTENER",
+      "property": "loopback listener address, inode, state, and connection are correlated",
+      "result": "PASS"
+    },
+    {
+      "evidence": "observation.json;proc-ns.txt;launcher-ns.txt",
+      "failure_reason": null,
+      "id": "RF-A0.CONTEXT.NAMESPACE",
+      "property": "probe namespace links match the launcher for compared types",
+      "result": "PASS"
+    },
+    {
+      "evidence": "observation.json;proc-cgroup.txt;launcher-cgroup.txt",
+      "failure_reason": null,
+      "id": "RF-A0.CONTEXT.CGROUP",
+      "property": "probe cgroup record matches the launcher without a governance claim",
+      "result": "PASS"
+    },
+    {
+      "evidence": "observation.json;probe-stdout.txt;proc-fd.txt",
+      "failure_reason": null,
+      "id": "RF-A0.SIGNAL.CONTROLLED_SHUTDOWN",
+      "property": "Linux signalfd drives controlled SIGTERM shutdown without forced kill",
+      "result": "PASS"
+    },
+    {
+      "evidence": "signal-stress.json",
+      "failure_reason": null,
+      "id": "RF-A0.SIGNAL.STRESS",
+      "property": "128 repeated shutdown iterations complete without forced termination",
+      "result": "PASS"
+    },
+    {
+      "evidence": "observation.json;toolchain-baseline.json",
+      "failure_reason": null,
+      "id": "RF-A0.TOOLCHAIN.CXX23_ACCEPTED",
+      "property": "compiled probe reports the accepted C++23 language macro",
+      "result": "PASS"
+    },
+    {
+      "evidence": "praxis-identity-before-validator.json;praxis-identity-after-validator.json",
+      "failure_reason": null,
+      "id": "RF-A0.PRAXIS.IDENTITY_OBSERVED",
+      "property": "Praxis HEAD, cleanliness, validator, helper, and schema identities are directly observed and stable",
+      "result": "PASS"
+    },
+    {
+      "evidence": "action-praxis-validator.txt;praxis-validator.json;praxis-identity-before-validator.json",
+      "failure_reason": null,
+      "id": "RF-A0.PRAXIS.BOOTSTRAP_GAP",
+      "property": "the observed Praxis validator outcome is classified against the unchanged H06 prediction",
+      "result": "EXPECTED_FAIL_CLOSED"
+    },
+    {
+      "evidence": "action-git-diff-check.txt",
+      "failure_reason": null,
+      "id": "RF-A0.INTEGRITY.GIT_DIFF",
+      "property": "Git whitespace check passes",
+      "result": "PASS"
+    },
+    {
+      "evidence": "project text tree",
+      "failure_reason": "governance/inputs/005-rf-a0-epistemic-closure-audit.md:3:trailing whitespace; governance/inputs/005-rf-a0-epistemic-closure-audit.md:4:trailing whitespace; governance/inputs/005-rf-a0-epistemic-closure-audit.md:5:trailing whitespace; governance/inputs/005-rf-a0-epistemic-closure-audit.md:6:trailing whitespace; governance/inputs/005-rf-a0-epistemic-closure-audit.md:7:trailing whitespace; governance/inputs/005-rf-a0-epistemic-closure-audit.md:8:trailing whitespace; governance/inputs/005-rf-a0-epistemic-closure-audit.md:9:trailing whitespace",
+      "id": "RF-A0.INTEGRITY.UNTRACKED_TEXT",
+      "property": "all authored and generated text passes the untracked-tree whitespace equivalent",
+      "result": "FAIL"
+    },
+    {
+      "evidence": "epistemic-outcomes.json;.hoa/protocols/rf-a0-epistemic-closure.json",
+      "failure_reason": null,
+      "id": "RF-A0.EPISTEMIC.CAUSAL_TRACEABILITY",
+      "property": "every protocol prediction is compared only through declared checks and evidence",
+      "result": "PASS"
+    }
+  ],
+  "milestone": "RF-A0",
+  "result": "FAIL",
+  "run_id": "20260815T174408.158972Z-eaacf6cf2948"
+}

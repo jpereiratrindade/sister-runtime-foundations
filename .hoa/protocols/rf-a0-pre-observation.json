@@ -1,0 +1,117 @@
+{
+  "artifact": "srf-pre-observation-protocol/0.1",
+  "milestone": "RF-A0",
+  "experiment": "RF-A0-HARDENING",
+  "status": "fixed_before_decisive_observation",
+  "claim_boundary": "The orchestrator digest can establish only that these exact bytes were committed before that orchestrated run collected decisive observations. It does not establish authorship, originality, truth, or absence of prior unrelated knowledge.",
+  "commitments": [
+    {
+      "id": "RF-A0-H01",
+      "question": "Can a termination request be lost between a loop-condition check and a blocking wait?",
+      "prior_understanding": "The existing async handler writes a flag, while the main loop tests the flag before entering poll with no atomic transition.",
+      "hypothesis": "There is a counterexample window in which SIGTERM sets the flag after the condition test and before poll blocks, leaving no event to wake poll.",
+      "prediction": "Static event-order analysis will exhibit the window; blocking SIGTERM/SIGINT before creating signalfd and polling that descriptor will remove this specific lost-wakeup ordering.",
+      "alternative_explanation": "A timeout-based poll could conceal rather than remove the race.",
+      "contradiction_condition": "If signal delivery and entry into the wait are already atomic, or the selected replacement still permits a handled signal with no readable wakeup event, the hypothesis or correction is wrong."
+    },
+    {
+      "id": "RF-A0-H02",
+      "question": "What platform scope can the decisive RF-A0 run directly support?",
+      "prior_understanding": "Earlier evidence recorded kernel-facing behavior but did not preserve distribution, libc, architecture, and toolchain as one baseline.",
+      "hypothesis": "The current execution userspace is Fedora and can be identified read-only without treating all observations as distribution-independent Linux facts.",
+      "prediction": "The gate will read a Fedora identity from /etc/os-release and record kernel, architecture, glibc, compiler, CMake, and Python identities for the same run.",
+      "alternative_explanation": "The environment could expose a non-Fedora userspace or incomplete identity data despite earlier assumptions.",
+      "contradiction_condition": "Any required baseline field is absent, unverifiable, or identifies a non-Fedora distribution."
+    },
+    {
+      "id": "RF-A0-H03",
+      "question": "Does the build establish the declared C++23 language contract without assuming complete C++23 library support?",
+      "prior_understanding": "CMake requests C++23 and the compile command uses -std=c++23, while RF-A0 uses mostly older standard-library facilities plus Linux/POSIX interfaces.",
+      "hypothesis": "A clean build can establish compiler identity, the actual C++23 command, and an accepted __cplusplus level without adding decorative C++23 library dependencies.",
+      "prediction": "CMake metadata and compile_commands.json will agree on compiler/version, the command will contain -std=c++23, compilation will enforce the C++23 language macro, and the probe will report it.",
+      "alternative_explanation": "A compiler may accept the option while exposing an older language macro or incomplete facility required by the source.",
+      "contradiction_condition": "The clean build fails the language assertion, lacks the requested standard option, or runtime/build records disagree."
+    },
+    {
+      "id": "RF-A0-H04",
+      "question": "Can the project show that a run's prediction bytes were fixed before its decisive observation?",
+      "prior_understanding": "The prior synthesized learning record co-located predictions and observations and therefore did not independently establish ordering.",
+      "hypothesis": "Hashing this separate protocol and writing the commitment before platform/build/runtime collection creates an auditable temporal boundary for the orchestrated run.",
+      "prediction": "Each decisive run will contain a timestamped commitment with this protocol digest, followed by evidence carrying the same digest; ledger validation will reject a mismatch.",
+      "alternative_explanation": "A checksum alone might be overinterpreted as proof of historical authorship or originality.",
+      "contradiction_condition": "Observation timestamps precede commitment, evidence omits the digest, or validation accepts altered protocol bytes."
+    },
+    {
+      "id": "RF-A0-H05",
+      "question": "Can project-owned executable code have bounded external execution authority rather than only a forbidden-word scan?",
+      "prior_understanding": "Subprocess calls are currently distributed across the gate, collector, and test, and arguments are not enforced by one policy.",
+      "hypothesis": "A single project-local authority module can validate executable identity and argument shape before every project-owned subprocess launch.",
+      "prediction": "Static inspection will find subprocess creation only in the authority module, whose allowlist permits CMake, CTest, selected read-only Git operations, exact Python scripts, and the built probe with constrained arguments.",
+      "alternative_explanation": "An allowlist of executable names without argument constraints would still permit materially broader effects.",
+      "contradiction_condition": "A project script can reach subprocess APIs directly, use shell execution, or authorize an undeclared executable/argument shape."
+    },
+    {
+      "id": "RF-A0-H06",
+      "question": "Can Praxis 0.1 truthfully represent a governed project before its first authorized commit?",
+      "prior_understanding": "The schema requires nonempty last-verified gate/evidence/commit fields, and the validator requires PASS evidence plus commit ancestry.",
+      "hypothesis": "No truthful SRF representation can satisfy the generic validator while the project has no verified milestone, no HEAD, and no authority to commit.",
+      "prediction": "Schema validation can pass using explicit sentinels, SRF internal consistency can remain coherent, and the unchanged governed-project validator will fail closed.",
+      "alternative_explanation": "The existing gate/evidence paths might be structurally valid yet semantically imply a last verified milestone that NONE denies.",
+      "contradiction_condition": "The unchanged validator reports governed-project PASS without a real ancestor commit, or Praxis exposes a current canonical pre-history representation that was previously missed."
+    },
+    {
+      "id": "RF-A0-P01",
+      "question": "How is the ordinary child correlated with its launcher and executable?",
+      "prior_understanding": "A live process identity is distinct from executable metadata.",
+      "hypothesis": "Probe self-report and procfs will agree on PID, PPID, credentials, and executable.",
+      "prediction": "The child handle, output, /proc/<pid>/status, and /proc/<pid>/exe will correlate.",
+      "alternative_explanation": "A wrapper could alter the expected parent relationship.",
+      "contradiction_condition": "Any independently observed identity field disagrees."
+    },
+    {
+      "id": "RF-A0-P02",
+      "question": "Is a retained regular file externally observable as live process state?",
+      "prior_understanding": "A pathname and an open descriptor are related but distinct.",
+      "hypothesis": "The retained descriptor will resolve to the declared file while the child lives.",
+      "prediction": "/proc/<pid>/fd/<fd> will identify the exact experiment file.",
+      "alternative_explanation": "File creation alone could be mistaken for an open-resource relationship.",
+      "contradiction_condition": "The descriptor is absent or resolves elsewhere."
+    },
+    {
+      "id": "RF-A0-P03",
+      "question": "Is the explicit loopback listener independently observable?",
+      "prior_understanding": "A printed port is not sufficient socket evidence.",
+      "hypothesis": "Descriptor, inode, TCP row, address, state, and connection will agree.",
+      "prediction": "The socket inode will occur in a 127.0.0.1 LISTEN row and a loopback connection will succeed.",
+      "alternative_explanation": "Apparent reachability could be attributed only to external filtering.",
+      "contradiction_condition": "Any socket correlation fails or the listener is not explicitly loopback-bound."
+    },
+    {
+      "id": "RF-A0-P04",
+      "question": "Does the child remain in the launcher's compared namespace memberships?",
+      "prior_understanding": "An ordinary child is expected to inherit membership absent an explicit or external change.",
+      "hypothesis": "All corresponding namespace links will match during the run.",
+      "prediction": "/proc/self/ns and /proc/<pid>/ns targets will be equal by type.",
+      "alternative_explanation": "The surrounding environment may itself already be namespaced.",
+      "contradiction_condition": "Any compared identifier differs."
+    },
+    {
+      "id": "RF-A0-P05",
+      "question": "Does the child retain the launcher's observed cgroup membership?",
+      "prior_understanding": "Membership is normally inherited unless an external manager or project operation changes it.",
+      "hypothesis": "Launcher and child cgroup records will match.",
+      "prediction": "The records will be byte-identical during the live observation.",
+      "alternative_explanation": "An external service manager could relocate the child.",
+      "contradiction_condition": "The records differ."
+    },
+    {
+      "id": "RF-A0-P06",
+      "question": "Does the corrected signal mechanism shut down reliably under repetition?",
+      "prior_understanding": "signalfd should turn blocked signals into pollable events without the prior flag/wait gap.",
+      "hypothesis": "Every bounded stress iteration will report SIGTERM and controlled zero-exit shutdown without forced termination.",
+      "prediction": "The full observation and repeated immediate-after-ready terminations will all succeed.",
+      "alternative_explanation": "Stress success alone cannot mathematically prove absence of every concurrency defect.",
+      "contradiction_condition": "Any iteration hangs, needs forced kill, omits the signal record, or exits nonzero."
+    }
+  ]
+}

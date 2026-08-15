@@ -1,0 +1,13 @@
+version: "1.0"
+project: sister-runtime-foundations
+governance_method: praxis-governed-engineering/0.1
+phase: RF-A0
+status: active
+last_verified_milestone: NONE
+last_verified_commit: "0000000"
+last_verified_gate: NONE
+last_verified_evidence: NONE
+next_milestone: RF-A0
+next_milestone_status: active
+next_milestone_authorized: true
+updated_on: "2026-08-15"

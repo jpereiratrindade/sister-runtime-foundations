@@ -1,0 +1,173 @@
+{
+  "artifact": "srf-post-observation-learning/0.2",
+  "scope": "RF-A0",
+  "status": "synthesized",
+  "protocol": {
+    "path": ".hoa/protocols/rf-a0-pre-observation.json",
+    "sha256": "cba33aabff5e45d499f097bac16bda6fb33cef5add32924d906be89bda074e40"
+  },
+  "decisive_run": {
+    "run_id": "20260815T164756.673426Z-cba33aabff5e",
+    "record": "docs/experiments/evidence/rf-a0/runs/20260815T164756.673426Z-cba33aabff5e/run-record.json",
+    "chain_hash": "4bd27383b3f4a813ed05f965f26699ff0b8dcf181fe9f4e5b4e95d8ff0aba783"
+  },
+  "confidence_scale": {
+    "TENTATIVE": "one bounded observation or analysis",
+    "SUPPORTED": "a focused experiment confronted an explicit prediction",
+    "STRONGLY_SUPPORTED": "repeated or independently correlated evidence is protected by an executable gate"
+  },
+  "entries": [
+    {
+      "protocol_id": "RF-A0-H01",
+      "observation": "The old flag/poll ordering admits a signal-after-test-before-poll lost-wakeup window. The replacement blocks SIGINT/SIGTERM before creating signalfd, polls that descriptor with the listener, and completed 64 CTest plus 128 evidence-collector stress iterations.",
+      "confrontation_with_prediction": "SUPPORTED; the static counterexample window exists and the chosen wait set removes that specific ordering. No timeout was added.",
+      "interpretation": "The correction follows from signal-mask and file-descriptor event semantics; repetition checks the implementation but is not the correctness proof.",
+      "learning": "For this single-threaded Fedora/Linux probe, signalfd provides one race-free event source for blocked shutdown signals and listener activity.",
+      "confidence": "STRONGLY_SUPPORTED",
+      "candidate_rule": "A blocking RF-A0 wait must have an atomic relationship with shutdown notification; lost-wakeup-prone flag-plus-wait designs are rejected.",
+      "candidate_rule_disposition": "ACCEPTED_PROJECT_LOCAL",
+      "governance_consequence": "RF-A0.SIGNAL.CONTROLLED_SHUTDOWN and RF-A0.SIGNAL.STRESS protect the correction.",
+      "open_question": "Other signal/lifecycle requirements of a real SisTer service remain unverified."
+    },
+    {
+      "protocol_id": "RF-A0-H02",
+      "observation": "The run recorded Fedora Linux 44 Workstation, kernel 7.1.6-201.fc44.x86_64, x86_64, and glibc 2.43 alongside its toolchain.",
+      "confrontation_with_prediction": "SUPPORTED; all required identity fields were available through read-only inspection.",
+      "interpretation": "Distribution, kernel, libc, architecture, and project behavior are separate provenance dimensions.",
+      "learning": "RF-A0 evidence is a Fedora reference-platform observation of Linux interfaces, not evidence that every distribution or kernel behaves identically.",
+      "confidence": "SUPPORTED",
+      "candidate_rule": "Every decisive RF-A0 run records the actual Fedora/userspace/kernel/libc/toolchain baseline and bounds conclusions to it.",
+      "candidate_rule_disposition": "ACCEPTED_PROJECT_LOCAL",
+      "governance_consequence": "RF-A0.PLATFORM.FEDORA and RF-A0.PLATFORM.COMPLETE are machine-readable gate checks.",
+      "open_question": "Which observations remain stable on another Fedora release or Linux userspace is not yet known."
+    },
+    {
+      "protocol_id": "RF-A0-H03",
+      "observation": "GCC 16.1.1 compiled with -std=c++23 and warnings as errors; the probe enforced and reported __cplusplus=202302. No new standard-library dependency was needed.",
+      "confrontation_with_prediction": "SUPPORTED; CMake metadata, compile command, successful build, and probe report agreed.",
+      "interpretation": "Accepted language mode is directly evidenced; complete C++23 standard-library conformance is neither required nor established.",
+      "learning": "C++23 is the application language contract, while Linux/POSIX calls remain direct experimental interfaces and library capability claims stay facility-specific.",
+      "confidence": "STRONGLY_SUPPORTED",
+      "candidate_rule": "Record compiler/version, actual command, requested mode, accepted language macro, and exact library facilities relied upon.",
+      "candidate_rule_disposition": "ACCEPTED_PROJECT_LOCAL",
+      "governance_consequence": "RF-A0.TOOLCHAIN.CXX23_COMMAND and RF-A0.TOOLCHAIN.CXX23_ACCEPTED enforce the contract.",
+      "open_question": "No unused C++23 library facility needs qualification at RF-A0."
+    },
+    {
+      "protocol_id": "RF-A0-H04",
+      "observation": "commitment.json recorded protocol digest cba33a... at 16:47:56Z; observation.json began at 16:48:00Z, carried the same digest, and the gate rehashed the unchanged protocol.",
+      "confrontation_with_prediction": "SUPPORTED; commitment preceded decisive observation and digest linkage validated.",
+      "interpretation": "The evidence establishes ordering inside this orchestrated run, not authorship, originality, truth, or ignorance of earlier observations.",
+      "learning": "Separating protocol and synthesis plus committing exact bytes gives a mechanically auditable but deliberately narrow temporal epistemic boundary.",
+      "confidence": "STRONGLY_SUPPORTED",
+      "candidate_rule": "Every decisive run must persist a protocol digest before observations and carry it through observation and ledger validation.",
+      "candidate_rule_disposition": "ACCEPTED_PROJECT_LOCAL",
+      "governance_consequence": "RF-A0.EPISTEMIC.PROTOCOL, DIGEST, and ORDER enforce separation and ordering.",
+      "open_question": "External timestamping or authorship attestation is outside RF-A0 and not implied."
+    },
+    {
+      "protocol_id": "RF-A0-H05",
+      "observation": "Static AST inspection found subprocess creation only in execution_authority.py; its policy and implemented roles matched, shell execution was absent, and every executed action carried a role and constrained argv.",
+      "confrontation_with_prediction": "SUPPORTED; direct project-script authority was centralized and default-deny with argument-shape checks.",
+      "interpretation": "This bounds commands directly launched by project Python, while CMake's compiler/linker children remain an explicit delegated build boundary.",
+      "learning": "Effect-oriented control requires constraining executable identity and arguments, not merely searching for forbidden words.",
+      "confidence": "STRONGLY_SUPPORTED",
+      "candidate_rule": "Project subprocess creation remains centralized, shell-free, statically inspected, and role/argument allowlisted.",
+      "candidate_rule_disposition": "ACCEPTED_PROJECT_LOCAL",
+      "governance_consequence": "RF-A0.AUTHORITY.ALLOWLIST and CALL_SITES protect the execution boundary.",
+      "open_question": "The semantic trustworthiness of allowed tools remains an environmental limitation."
+    },
+    {
+      "protocol_id": "RF-A0-H06",
+      "observation": "The canonical state and experiment schemas passed; SRF internal checks passed with NONE/NONE gate/evidence sentinels; the unchanged Praxis validator exited 1 at gate missing — NONE while HEAD remained absent.",
+      "confrontation_with_prediction": "SUPPORTED; no current truthful pre-history representation satisfied the generic governed-project validator.",
+      "interpretation": "The former real gate/evidence paths semantically suggested prior verification despite NONE. Making all four sentinels honest improves SRF consistency but intentionally fails Praxis project validity earlier.",
+      "learning": "Schema validity, internal pre-history consistency, and governed-project validity are three different states in Praxis 0.1.",
+      "confidence": "STRONGLY_SUPPORTED",
+      "candidate_rule": "Do not fabricate prior gate/evidence/commit provenance; preserve the gap as a method candidate until Praxis evolves separately.",
+      "candidate_rule_disposition": "ACCEPTED_PROJECT_LOCAL_AND_RECORDED_AS_PRAXIS_CANDIDATE",
+      "governance_consequence": "RF-A0.PRAXIS.BOOTSTRAP_GAP is EXPECTED_FAIL_CLOSED, never PASS.",
+      "open_question": "Praxis must decide a canonical no-history representation outside this project."
+    },
+    {
+      "protocol_id": "RF-A0-P01",
+      "observation": "Probe output, child handle, proc status, credentials, and executable link correlated for the live process.",
+      "confrontation_with_prediction": "SUPPORTED.",
+      "interpretation": "Executable identity and live process identity are related but distinct.",
+      "learning": "A process claim needs live kernel state, not executable metadata alone.",
+      "confidence": "STRONGLY_SUPPORTED",
+      "candidate_rule": "Correlate process and executable through independent procfs observations.",
+      "candidate_rule_disposition": "ACCEPTED_PROJECT_LOCAL",
+      "governance_consequence": "RF-A0.PROCESS.IDENTITY.",
+      "open_question": "PID visibility under deliberate namespace variation belongs to RF-A2."
+    },
+    {
+      "protocol_id": "RF-A0-P02",
+      "observation": "The reported regular descriptor resolved to the exact experiment file while the child lived.",
+      "confrontation_with_prediction": "SUPPORTED.",
+      "interpretation": "The descriptor is process state distinct from the path.",
+      "learning": "File creation does not substitute for proving a retained live descriptor.",
+      "confidence": "STRONGLY_SUPPORTED",
+      "candidate_rule": "Correlate required regular resources through live descriptors.",
+      "candidate_rule_disposition": "ACCEPTED_PROJECT_LOCAL",
+      "governance_consequence": "RF-A0.FILE.OPEN_FD.",
+      "open_question": "Rename, unlink, and persistence semantics belong to RF-A1."
+    },
+    {
+      "protocol_id": "RF-A0-P03",
+      "observation": "Socket descriptor, inode, 127.0.0.1 LISTEN row, port, and active connection agreed.",
+      "confrontation_with_prediction": "SUPPORTED.",
+      "interpretation": "Explicit binding evidence discriminates the result from a printed claim or external filter alone.",
+      "learning": "A listening endpoint is live socket state in a network context.",
+      "confidence": "STRONGLY_SUPPORTED",
+      "candidate_rule": "Require descriptor/inode/TCP-row/connection correlation.",
+      "candidate_rule_disposition": "ACCEPTED_PROJECT_LOCAL",
+      "governance_consequence": "RF-A0.NET.LOOPBACK_LISTENER.",
+      "open_question": "Network-isolation semantics belong to RF-A4."
+    },
+    {
+      "protocol_id": "RF-A0-P04",
+      "observation": "Launcher and child links matched for all ten namespace entries compared.",
+      "confrontation_with_prediction": "SUPPORTED.",
+      "interpretation": "The relation shows inherited membership, not an absence of namespaces in the surrounding environment.",
+      "learning": "Namespace claims require an explicit comparison context.",
+      "confidence": "SUPPORTED",
+      "candidate_rule": "Keep RF-A0 namespace conclusions launcher-relative.",
+      "candidate_rule_disposition": "ACCEPTED_PROJECT_LOCAL",
+      "governance_consequence": "RF-A0.CONTEXT.NAMESPACE.",
+      "open_question": "Namespace creation behavior belongs to RF-A2."
+    },
+    {
+      "protocol_id": "RF-A0-P05",
+      "observation": "Launcher and child cgroup records matched byte-for-byte.",
+      "confrontation_with_prediction": "SUPPORTED.",
+      "interpretation": "No project membership change was observed; this is not evidence of limits or controller governance.",
+      "learning": "Inherited membership and configured resource governance are distinct claims.",
+      "confidence": "SUPPORTED",
+      "candidate_rule": "Report membership without claiming project-configured control.",
+      "candidate_rule_disposition": "ACCEPTED_PROJECT_LOCAL",
+      "governance_consequence": "RF-A0.CONTEXT.CGROUP.",
+      "open_question": "cgroup v2 controllers and limits belong to RF-A3."
+    },
+    {
+      "protocol_id": "RF-A0-P06",
+      "observation": "The full run plus 128 immediate-after-ready collector iterations reported SIGTERM, controlled shutdown, zero exit, and no forced kill; CTest independently repeated 64 iterations.",
+      "confrontation_with_prediction": "SUPPORTED; no iteration contradicted the prediction.",
+      "interpretation": "Stress supports implementation behavior, while signal-mask/signalfd ordering explains removal of the identified race.",
+      "learning": "Controlled shutdown evidence combines notification mechanism, emitted state, bounded exit, status, and no forced termination.",
+      "confidence": "STRONGLY_SUPPORTED",
+      "candidate_rule": "Retain signalfd checks and bounded repetition without claiming mathematical proof.",
+      "candidate_rule_disposition": "ACCEPTED_PROJECT_LOCAL",
+      "governance_consequence": "RF-A0.SIGNAL.CONTROLLED_SHUTDOWN and STRESS.",
+      "open_question": "Crash recovery and production service lifecycle remain untested."
+    }
+  ],
+  "unexpected_observations": [],
+  "deferred": [
+    "Cross-distribution generalization",
+    "Complete C++23 standard-library conformance",
+    "RF-A1 through RF-A9 behavior",
+    "A Praxis-wide bootstrap representation",
+    "Mathematical proof from stress testing"
+  ]
+}

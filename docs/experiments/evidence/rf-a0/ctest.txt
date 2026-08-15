@@ -1,0 +1,7 @@
+Test project /home/jpereiratrindade/dev/cpp/sister-runtime-foundations/.build/rf-a0
+    Start 1: runtime-probe-integration
+1/1 Test #1: runtime-probe-integration ........   Passed    0.06 sec
+
+100% tests passed, 0 tests failed out of 1
+
+Total Test time (real) =   0.06 sec

@@ -1,0 +1,10 @@
+{
+  "claim_boundary": "Historical protocol archives were created prospectively; exact bytes are recoverable but archival creation is not backdated.",
+  "index": ".hoa/protocols/index.json",
+  "observed_archive_digests": {
+    "cba33aabff5e45d499f097bac16bda6fb33cef5add32924d906be89bda074e40": "cba33aabff5e45d499f097bac16bda6fb33cef5add32924d906be89bda074e40",
+    "eaacf6cf294813252c044515ebd1298d64454a53a59d8320dde2519052783742": "eaacf6cf294813252c044515ebd1298d64454a53a59d8320dde2519052783742"
+  },
+  "run_snapshot_sha256": "eaacf6cf294813252c044515ebd1298d64454a53a59d8320dde2519052783742",
+  "valid": true
+}

@@ -1,0 +1,32 @@
+{
+  "candidate_gap": "PRAXIS BOOTSTRAP REPRESENTATION GAP",
+  "classification": "EXPECTED_FAIL_CLOSED",
+  "consulted_contracts": {
+    "experiment_record_schema": {
+      "path": "contracts/methodology/experiment-record.schema.json",
+      "sha256": "e24d9f98bf391310790b077ccafa3eddf1a61d47aeb2fc0171f5648792b74d46"
+    },
+    "project_state_schema": {
+      "path": "contracts/methodology/project-state.schema.json",
+      "sha256": "f7771bd32acd3bd279ca6e813f1c722d5f19d9c97ffcd85dfe62701e6e0bf20d"
+    },
+    "schema_helper": {
+      "path": "scripts/governed_method_schema.py",
+      "sha256": "4a733ee291afbdd2af0dace9fdd5fadce3ec2d6951b8bb69818d8a2b621ccf07"
+    }
+  },
+  "exit_status": 1,
+  "facts": {
+    "head_exists": false,
+    "last_verified_commit": "0000000",
+    "last_verified_milestone": "NONE"
+  },
+  "observed_failure": "FAIL  gate missing \u2014 NONE\nPASS  canonical state \u2014 .hoa/project-state.yaml\nPASS  canonical state conforms to project-state.schema.json\nPASS  governance method \u2014 praxis-governed-engineering/0.1\n",
+  "observed_identity_after": "praxis-identity-after-validator.json",
+  "observed_identity_before": "praxis-identity-before-validator.json",
+  "observed_praxis_head": "e0532b8f5b9861c3047c0f1ab6173048cb445068",
+  "validator": {
+    "path": "scripts/validate_governed_project.py",
+    "sha256": "df1e6f4a9f6263861c62c68527a0a219b9926535e6cf9d62999da8a7bc8109cc"
+  }
+}

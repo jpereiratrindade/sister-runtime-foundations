@@ -1,0 +1,28 @@
+{
+  "artifact": "srf-immutable-historical-prefix/0.1",
+  "scope": "RF-A0 decisive runs existing before the epistemic closure audit",
+  "observed_before_audit_mutation": true,
+  "historical_run_count": 3,
+  "historical_head": "fc6d758e6a04d07451b9d86af45be1ef33b23d61731c124ee0140b1e72894fcc",
+  "historical_content_aggregate_sha256": "833f6bcda653122bd5dacd507c3fda3d4bff193d0faa3a4a12ae4cd091473203",
+  "historical_file_count": 93,
+  "protocol_sha256": "cba33aabff5e45d499f097bac16bda6fb33cef5add32924d906be89bda074e40",
+  "runs": [
+    {
+      "run_id": "20260815T164756.673426Z-cba33aabff5e",
+      "chain_hash": "4bd27383b3f4a813ed05f965f26699ff0b8dcf181fe9f4e5b4e95d8ff0aba783",
+      "record_sha256": "d8f1e466074acff6033bfed09598e3e2f9acff62c072c79ca6f078f1f33c965a"
+    },
+    {
+      "run_id": "20260815T165109.608933Z-cba33aabff5e",
+      "chain_hash": "696a1eaef66c1b44a8a8e6dabdbbb4d0ca451947db661c3aa10a819a3b56ca16",
+      "record_sha256": "5c1cd72e3cbbd341ab3636f3d39d6a0c5aef559cc76da61dc5c8a742a15615f7"
+    },
+    {
+      "run_id": "20260815T165145.875757Z-cba33aabff5e",
+      "chain_hash": "fc6d758e6a04d07451b9d86af45be1ef33b23d61731c124ee0140b1e72894fcc",
+      "record_sha256": "6cbdb68186e4702faf1c08525465527af2819fb85f0957b551c4afc41f6a26ae"
+    }
+  ],
+  "claim_boundary": "These values were independently observed before closure-audit changes. They protect the historical prefix prospectively without claiming that this manifest existed during those runs."
+}

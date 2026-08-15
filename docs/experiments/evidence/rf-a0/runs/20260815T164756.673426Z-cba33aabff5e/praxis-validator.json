@@ -1,0 +1,13 @@
+{
+  "candidate_gap": "PRAXIS BOOTSTRAP REPRESENTATION GAP",
+  "classification": "EXPECTED_FAIL_CLOSED",
+  "exit_status": 1,
+  "facts": {
+    "head_exists": false,
+    "last_verified_commit": "0000000",
+    "last_verified_milestone": "NONE"
+  },
+  "observed_failure": "FAIL  gate missing \u2014 NONE\nPASS  canonical state \u2014 .hoa/project-state.yaml\nPASS  canonical state conforms to project-state.schema.json\nPASS  governance method \u2014 praxis-governed-engineering/0.1\n",
+  "praxis_commit": "e0532b8f5b9861c3047c0f1ab6173048cb445068",
+  "validator": "/home/jpereiratrindade/dev/cpp/Praxis/scripts/validate_governed_project.py"
+}

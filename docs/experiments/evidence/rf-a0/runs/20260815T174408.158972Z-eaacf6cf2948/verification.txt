@@ -1,0 +1,64 @@
+SisTer Runtime Foundations RF-A0 epistemic closure evidence
+run_id=20260815T174408.158972Z-eaacf6cf2948
+result=FAIL
+
+SisTer Runtime Foundations — RF-A0 epistemic closure gate
+root=/home/jpereiratrindade/dev/cpp/sister-runtime-foundations
+run_id=20260815T174408.158972Z-eaacf6cf2948
+protocol_sha256=eaacf6cf294813252c044515ebd1298d64454a53a59d8320dde2519052783742
+PASS RF-A0.EPISTEMIC.PROTOCOL — pre-observation protocol is separate and observation-free
+PASS RF-A0.EPISTEMIC.DIGEST — protocol digest is SHA-256 over the committed bytes
+PASS RF-A0.EPISTEMIC.SYNTHESIS — post-observation learning is separate, complete, and linked to the protocol
+PASS RF-A0.LEARNING.PRAXIS_CANDIDATE — Praxis bootstrap gap remains a project-local candidate without adoption authority
+PASS RF-A0.EPISTEMIC.PROTOCOL_ARCHIVE — historical and current protocol bytes are content-addressed and the run snapshot agrees
+PASS RF-A0.HISTORY.PREFIX_IMMUTABLE — the original three-run chain and all 93 historical files are byte-identical
+PASS RF-A0.GOVERNANCE.SCHEMA — canonical state conforms to the current Praxis schema
+PASS RF-A0.EXPERIMENT.SCHEMA — RF-A0 record conforms to the current Praxis experiment schema
+PASS RF-A0.GOVERNANCE.STATE — RF-A0 remains active and is not promoted
+PASS RF-A0.GOVERNANCE.NO_PRIOR_VERIFICATION — all last-verified fields use honest pre-history sentinels
+PASS RF-A0.GOVERNANCE.AUTHORITY — only RF-A0 is authorized and RF-A1 through RF-A9 are unauthorized
+PASS RF-A0.INPUT.BOOTSTRAP_MISSION — constitutive input is project-relative and digest-valid
+PASS RF-A0.INPUT.EPISTEMIC_ADDENDUM — constitutive input is project-relative and digest-valid
+PASS RF-A0.INPUT.HARDENING_MISSION — constitutive input is project-relative and digest-valid
+PASS RF-A0.INPUT.BOUNDED_AUTONOMY_ADDENDUM — constitutive input is project-relative and digest-valid
+PASS RF-A0.INPUT.EPISTEMIC_CLOSURE_AUDIT — constitutive input is project-relative and digest-valid
+PASS RF-A0.AUTHORITY.ALLOWLIST — declared external-execution roles equal the implemented allowlist
+PASS RF-A0.AUTHORITY.CALL_SITES — all project subprocess creation is centralized and shell-free
+PASS RF-A0.SCOPE.ARTIFACTS — no forbidden deployment manifest exists
+PASS RF-A0.SCOPE.IMPLEMENTATION — native probe and build contain no later-milestone mechanism
+PASS RF-A0.SCOPE.UNPRIVILEGED — gate executes without root privileges
+PASS RF-A0.GIT.NO_REMOTE — Git has no configured remote
+PASS RF-A0.GIT.NO_COMMIT — repository still has no commit
+PASS RF-A0.BUILD.CMAKE_VERSION — CMake version query succeeds
+PASS RF-A0.BUILD.CLEAN_DIRECTORY — decisive run starts with a new build directory
+PASS RF-A0.BUILD.CONFIGURE — clean CMake configure succeeds
+PASS RF-A0.BUILD.CXX23 — C++23 warnings-as-errors build succeeds
+PASS RF-A0.PLATFORM.FEDORA — decisive platform identifies a Fedora userspace
+PASS RF-A0.PLATFORM.COMPLETE — distribution, kernel, architecture, libc, compiler, CMake, and Python are recorded
+PASS RF-A0.TOOLCHAIN.CXX23_COMMAND — actual probe compile command requests C++23 and warnings as errors
+PASS RF-A0.TEST.CTEST — CTest integration and repeated signal exercise pass
+PASS RF-A0.EPISTEMIC.COMPARISON_MODEL — focused tests demonstrate independent supported, contradicted, and inconclusive comparisons
+PASS RF-A0.EPISTEMIC.UNEXPECTED_CHANNEL — focused tests demonstrate empty normal and populated anomalous observation channels
+PASS RF-A0.EPISTEMIC.LEARNING_BOUNDARY — focused tests suppress unsupported learning and preserve non-adoption authority
+PASS RF-A0.RUNTIME.COLLECTOR — decisive runtime collector succeeds
+PASS RF-A0.EPISTEMIC.ORDER — committed protocol predates decisive runtime observation and digest agrees
+PASS RF-A0.PROCESS.IDENTITY — process identity and executable are correlated through procfs
+PASS RF-A0.FILE.OPEN_FD — retained regular file descriptor is externally correlated
+PASS RF-A0.NET.LOOPBACK_LISTENER — loopback listener address, inode, state, and connection are correlated
+PASS RF-A0.CONTEXT.NAMESPACE — probe namespace links match the launcher for compared types
+PASS RF-A0.CONTEXT.CGROUP — probe cgroup record matches the launcher without a governance claim
+PASS RF-A0.SIGNAL.CONTROLLED_SHUTDOWN — Linux signalfd drives controlled SIGTERM shutdown without forced kill
+PASS RF-A0.SIGNAL.STRESS — 128 repeated shutdown iterations complete without forced termination
+PASS RF-A0.TOOLCHAIN.CXX23_ACCEPTED — compiled probe reports the accepted C++23 language macro
+PASS RF-A0.PRAXIS.IDENTITY_OBSERVED — Praxis HEAD, cleanliness, validator, helper, and schema identities are directly observed and stable
+EXPECTED_FAIL_CLOSED RF-A0.PRAXIS.BOOTSTRAP_GAP — the observed Praxis validator outcome is classified against the unchanged H06 prediction
+PASS RF-A0.INTEGRITY.GIT_DIFF — Git whitespace check passes
+FAIL RF-A0.INTEGRITY.UNTRACKED_TEXT — all authored and generated text passes the untracked-tree whitespace equivalent
+FAIL RF-A0.INTEGRITY.UNTRACKED_TEXT: governance/inputs/005-rf-a0-epistemic-closure-audit.md:3:trailing whitespace; governance/inputs/005-rf-a0-epistemic-closure-audit.md:4:trailing whitespace; governance/inputs/005-rf-a0-epistemic-closure-audit.md:5:trailing whitespace; governance/inputs/005-rf-a0-epistemic-closure-audit.md:6:trailing whitespace; governance/inputs/005-rf-a0-epistemic-closure-audit.md:7:trailing whitespace; governance/inputs/005-rf-a0-epistemic-closure-audit.md:8:trailing whitespace; governance/inputs/005-rf-a0-epistemic-closure-audit.md:9:trailing whitespace
+PASS RF-A0.EPISTEMIC.CAUSAL_TRACEABILITY — every protocol prediction is compared only through declared checks and evidence
+FAILURE RF-A0.INTEGRITY.UNTRACKED_TEXT: governance/inputs/005-rf-a0-epistemic-closure-audit.md:3:trailing whitespace; governance/inputs/005-rf-a0-epistemic-closure-audit.md:4:trailing whitespace; governance/inputs/005-rf-a0-epistemic-closure-audit.md:5:trailing whitespace; governance/inputs/005-rf-a0-epistemic-closure-audit.md:6:trailing whitespace; governance/inputs/005-rf-a0-epistemic-closure-audit.md:7:trailing whitespace; governance/inputs/005-rf-a0-epistemic-closure-audit.md:8:trailing whitespace; governance/inputs/005-rf-a0-epistemic-closure-audit.md:9:trailing whitespace
+
+LIMITATION stress testing increases race sensitivity but is not mathematical proof.
+LIMITATION the protocol digest proves only orchestrated ordering of exact bytes.
+LIMITATION command allowlisting bounds direct project-script authority, not the semantics of allowed tools or CMake children.
+RF-A0: FAIL

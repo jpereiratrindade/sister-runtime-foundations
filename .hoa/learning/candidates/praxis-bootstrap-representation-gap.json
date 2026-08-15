@@ -1,0 +1,17 @@
+{
+  "artifact": "srf-candidate-methodological-learning/0.1",
+  "id": "SRF-PRAXIS-BOOTSTRAP-REPRESENTATION-GAP",
+  "status": "candidate_for_external_praxis_evaluation",
+  "triggering_observation": "A new governed project with no authorized commit cannot truthfully populate Praxis 0.1 last-verified provenance while satisfying validate_governed_project.py.",
+  "evidence": "docs/experiments/evidence/rf-a0/runs/20260815T164756.673426Z-cba33aabff5e/praxis-validator.json",
+  "scope": "Praxis Governed Engineering 0.1 pre-history bootstrap representation as encountered by an uncommitted SRF repository.",
+  "proposed_generalization": "Praxis could evaluate an explicit canonical state for projects with no previously verified milestone, gate, evidence, or ancestor commit, distinct from verified-state provenance.",
+  "known_counterexamples_or_limitations": [
+    "Projects bootstrapped from an already verified governed commit do not have this pre-history state.",
+    "SRF has not surveyed every Praxis consumer or workspace contract.",
+    "Schema acceptance of sentinel strings does not establish that sentinels are canonical Praxis vocabulary.",
+    "This candidate does not authorize any Praxis modification."
+  ],
+  "project_local_consequence": "SRF uses honest NONE/0000000 sentinels, reports schema PASS separately, and classifies the unchanged generic validator failure as EXPECTED_FAIL_CLOSED.",
+  "praxis_adoption_authority": "none"
+}

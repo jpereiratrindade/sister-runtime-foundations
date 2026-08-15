@@ -1,0 +1,567 @@
+{
+  "actions": [
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/jpereiratrindade/dev/cpp/Praxis",
+        "rev-parse",
+        "HEAD"
+      ],
+      "authority_role": "git.praxis_head",
+      "completed_at_utc": "2026-08-15T17:46:12.483014+00:00",
+      "exit_status": 0,
+      "id": "praxis-head-before-validator",
+      "output": "action-praxis-head-before-validator.txt",
+      "started_at_utc": "2026-08-15T17:46:12.480666+00:00"
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/jpereiratrindade/dev/cpp/Praxis",
+        "status",
+        "--porcelain",
+        "--untracked-files=all"
+      ],
+      "authority_role": "git.praxis_status",
+      "completed_at_utc": "2026-08-15T17:46:12.489213+00:00",
+      "exit_status": 0,
+      "id": "praxis-status-before-validator",
+      "output": "action-praxis-status-before-validator.txt",
+      "started_at_utc": "2026-08-15T17:46:12.483249+00:00"
+    },
+    {
+      "argv": [
+        "git",
+        "remote"
+      ],
+      "authority_role": "git.remote",
+      "completed_at_utc": "2026-08-15T17:46:12.583061+00:00",
+      "exit_status": 0,
+      "id": "git-remote",
+      "output": "action-git-remote.txt",
+      "started_at_utc": "2026-08-15T17:46:12.580702+00:00"
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "--verify",
+        "HEAD"
+      ],
+      "authority_role": "git.head",
+      "completed_at_utc": "2026-08-15T17:46:12.585992+00:00",
+      "exit_status": 128,
+      "id": "git-head",
+      "output": "action-git-head.txt",
+      "started_at_utc": "2026-08-15T17:46:12.583308+00:00"
+    },
+    {
+      "argv": [
+        "git",
+        "status",
+        "--porcelain",
+        "--untracked-files=all"
+      ],
+      "authority_role": "git.status",
+      "completed_at_utc": "2026-08-15T17:46:12.590000+00:00",
+      "exit_status": 0,
+      "id": "git-status",
+      "output": "action-git-status.txt",
+      "started_at_utc": "2026-08-15T17:46:12.586191+00:00"
+    },
+    {
+      "argv": [
+        "cmake",
+        "--version"
+      ],
+      "authority_role": "cmake.version",
+      "completed_at_utc": "2026-08-15T17:46:12.599796+00:00",
+      "exit_status": 0,
+      "id": "cmake-version",
+      "output": "action-cmake-version.txt",
+      "started_at_utc": "2026-08-15T17:46:12.590203+00:00"
+    },
+    {
+      "argv": [
+        "cmake",
+        "-S",
+        "/home/jpereiratrindade/dev/cpp/sister-runtime-foundations",
+        "-B",
+        "/home/jpereiratrindade/dev/cpp/sister-runtime-foundations/.build/runs/20260815T174612.471492Z-eaacf6cf2948",
+        "-DCMAKE_BUILD_TYPE=Debug",
+        "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON"
+      ],
+      "authority_role": "cmake.configure",
+      "completed_at_utc": "2026-08-15T17:46:13.270146+00:00",
+      "exit_status": 0,
+      "id": "configure",
+      "output": "action-configure.txt",
+      "started_at_utc": "2026-08-15T17:46:12.600224+00:00"
+    },
+    {
+      "argv": [
+        "cmake",
+        "--build",
+        "/home/jpereiratrindade/dev/cpp/sister-runtime-foundations/.build/runs/20260815T174612.471492Z-eaacf6cf2948",
+        "--parallel"
+      ],
+      "authority_role": "cmake.build",
+      "completed_at_utc": "2026-08-15T17:46:15.348717+00:00",
+      "exit_status": 0,
+      "id": "build",
+      "output": "action-build.txt",
+      "started_at_utc": "2026-08-15T17:46:13.270386+00:00"
+    },
+    {
+      "argv": [
+        "ctest",
+        "--test-dir",
+        "/home/jpereiratrindade/dev/cpp/sister-runtime-foundations/.build/runs/20260815T174612.471492Z-eaacf6cf2948",
+        "--output-on-failure"
+      ],
+      "authority_role": "ctest.run",
+      "completed_at_utc": "2026-08-15T17:46:15.793844+00:00",
+      "exit_status": 0,
+      "id": "ctest",
+      "output": "action-ctest.txt",
+      "started_at_utc": "2026-08-15T17:46:15.350435+00:00"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/home/jpereiratrindade/dev/cpp/sister-runtime-foundations/scripts/collect_rf_a0_evidence.py",
+        "/home/jpereiratrindade/dev/cpp/sister-runtime-foundations/.build/runs/20260815T174612.471492Z-eaacf6cf2948/srf-runtime-probe",
+        "/home/jpereiratrindade/dev/cpp/sister-runtime-foundations/docs/experiments/evidence/rf-a0/runs/20260815T174612.471492Z-eaacf6cf2948"
+      ],
+      "authority_role": "python.collector",
+      "completed_at_utc": "2026-08-15T17:46:16.498541+00:00",
+      "exit_status": 0,
+      "id": "runtime-observation",
+      "output": "action-runtime-observation.txt",
+      "started_at_utc": "2026-08-15T17:46:15.794155+00:00"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/home/jpereiratrindade/dev/cpp/Praxis/scripts/validate_governed_project.py",
+        "/home/jpereiratrindade/dev/cpp/sister-runtime-foundations"
+      ],
+      "authority_role": "python.praxis_validator",
+      "completed_at_utc": "2026-08-15T17:46:16.586664+00:00",
+      "exit_status": 1,
+      "id": "praxis-validator",
+      "output": "action-praxis-validator.txt",
+      "started_at_utc": "2026-08-15T17:46:16.499140+00:00"
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/jpereiratrindade/dev/cpp/Praxis",
+        "rev-parse",
+        "HEAD"
+      ],
+      "authority_role": "git.praxis_head",
+      "completed_at_utc": "2026-08-15T17:46:16.588961+00:00",
+      "exit_status": 0,
+      "id": "praxis-head-after-validator",
+      "output": "action-praxis-head-after-validator.txt",
+      "started_at_utc": "2026-08-15T17:46:16.586862+00:00"
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/jpereiratrindade/dev/cpp/Praxis",
+        "status",
+        "--porcelain",
+        "--untracked-files=all"
+      ],
+      "authority_role": "git.praxis_status",
+      "completed_at_utc": "2026-08-15T17:46:16.592924+00:00",
+      "exit_status": 0,
+      "id": "praxis-status-after-validator",
+      "output": "action-praxis-status-after-validator.txt",
+      "started_at_utc": "2026-08-15T17:46:16.589148+00:00"
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "authority_role": "git.diff_check",
+      "completed_at_utc": "2026-08-15T17:46:16.596690+00:00",
+      "exit_status": 0,
+      "id": "git-diff-check",
+      "output": "action-git-diff-check.txt",
+      "started_at_utc": "2026-08-15T17:46:16.593917+00:00"
+    }
+  ],
+  "artifact": "srf-decisive-experimental-run/0.2",
+  "candidate_learning": [
+    {
+      "authority_boundary": "Machine generation proposes; it does not adopt a project or Praxis rule.",
+      "evidence_references": [
+        "praxis-identity-after-validator.json",
+        "praxis-identity-before-validator.json"
+      ],
+      "governance_adoption": "NONE",
+      "id": "RF-A0-CL01",
+      "interpretation_required": true,
+      "proposal": "Material external identities should be observed from the dependency instance actually used, not asserted in project source.",
+      "status": "CANDIDATE",
+      "supported_by_predictions": [
+        "RF-A0-E01"
+      ]
+    },
+    {
+      "authority_boundary": "Machine generation proposes; it does not adopt a project or Praxis rule.",
+      "evidence_references": [
+        "action-ctest.txt",
+        "tests/epistemic_model_test.py"
+      ],
+      "governance_adoption": "NONE",
+      "id": "RF-A0-CL02",
+      "interpretation_required": true,
+      "proposal": "Reflexive run records should preserve independent comparisons, operational anomaly capture, and evidence-dependent non-governing learning proposals.",
+      "status": "CANDIDATE",
+      "supported_by_predictions": [
+        "RF-A0-E02",
+        "RF-A0-E03",
+        "RF-A0-E04"
+      ]
+    },
+    {
+      "authority_boundary": "Machine generation proposes; it does not adopt a project or Praxis rule.",
+      "evidence_references": [
+        ".hoa/protocols/index.json",
+        "governance/historical-evidence-prefix.json",
+        "historical-integrity.json",
+        "protocol-archive-validation.json",
+        "protocol-snapshot.json"
+      ],
+      "governance_adoption": "NONE",
+      "id": "RF-A0-CL03",
+      "interpretation_required": true,
+      "proposal": "Digest commitments require recoverable content snapshots when Git history or an external archive is absent.",
+      "status": "CANDIDATE",
+      "supported_by_predictions": [
+        "RF-A0-E05"
+      ]
+    },
+    {
+      "authority_boundary": "Machine generation proposes; it does not adopt a project or Praxis rule.",
+      "evidence_references": [
+        "action-praxis-validator.txt",
+        "praxis-identity-before-validator.json",
+        "praxis-validator.json"
+      ],
+      "governance_adoption": "NONE",
+      "id": "RF-A0-CL04",
+      "interpretation_required": true,
+      "proposal": "The Praxis bootstrap representation gap remains a candidate for separate Praxis evaluation under the exact observed Praxis identity.",
+      "status": "CANDIDATE",
+      "supported_by_predictions": [
+        "RF-A0-H06"
+      ]
+    }
+  ],
+  "chain_hash": "c97bdd0e12e4f7c2295739fb52e4a46f0b7c2b081909570fbb999375de8919e5",
+  "epistemic_conclusion": "ALL_PROTOCOL_PREDICTIONS_SUPPORTED_NO_UNEXPECTED_OBSERVATIONS",
+  "evidence_sha256": {
+    "action-build.txt": "383256f7ff26285357a5b66696eaeb16420f51f84c196d0ef383b0ceeaa4a716",
+    "action-cmake-version.txt": "6b8c2501a983639b330c555c9a105057ea877b701cf25920bc3fe32dd2a54b13",
+    "action-configure.txt": "bed024bcdc720c53a7a6ed99e4e702a078153ba377e730bc81b9c17610d493ab",
+    "action-ctest.txt": "0be3683370742bf392db2f2f663f4dad0a27596a8427323e678b4ce7d98d111d",
+    "action-git-diff-check.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "action-git-head.txt": "9b3fab22fc89a33cf7f4e9d08072e43f29c2999ed2af63b6e8417b2ce9d534b4",
+    "action-git-remote.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "action-git-status.txt": "f9f462923428df0f5fd1df742ec89b32829b1278a6c9c5a90f79c7327ee42fd7",
+    "action-praxis-head-after-validator.txt": "9a6f4b8309119454f67d3d3d2446314b4103f9a69607b7778d45f26905a8d164",
+    "action-praxis-head-before-validator.txt": "9a6f4b8309119454f67d3d3d2446314b4103f9a69607b7778d45f26905a8d164",
+    "action-praxis-status-after-validator.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "action-praxis-status-before-validator.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "action-praxis-validator.txt": "20f4daf6d18ecafb4558c7b9fed978e4e71fbb7060d852a2997a3f0cbcfd659c",
+    "action-runtime-observation.txt": "4f091f42a6d5328c007115ea7d3fce2ddb79e160b2330b206132d8e1eb16e16b",
+    "analysis.md": "51f0176f48b6df75d049dd0691e1496f3e41697a5dee28c3df0a96db8557038b",
+    "commitment.json": "7d362a7bbc174cdac321898f4ddb7b4e76b026f8f809f8a63fa2a88edc6a5a6e",
+    "epistemic-outcomes.json": "99bcaaeb30ca7f2eab7a390acacbb67750261805323425a71a3746b96eb4a3d6",
+    "gate-results.json": "e3688bb9a650e1584696663f8dcf9c196fec91c2040240883e46db98db475f18",
+    "historical-integrity.json": "a87421f8b125aa4b0104dba591c41f939b35e3cf9dd6ca8c4e0a82ee1a517aa6",
+    "launcher-cgroup.txt": "3e3eb2a4a6d617858161983ab5922f2b9b8c2ff3563080f624df3521c15dc257",
+    "launcher-ns.txt": "ed1e9bffc4692dd7b8c3772f2a1d0c3ed0e5176e0d6d4c9942e16307e1dd954d",
+    "observation.json": "858295b9b9f02b38116f6706e9d9a7d7bb879093c9cac2828097ed9c5670b512",
+    "platform-baseline.json": "03ecaf15563a7fbd4743c84d7ca9193926c9465a0eb018e9801dc50ae925c6ca",
+    "praxis-identity-after-validator.json": "d7c072e88ad4199fcca08ea7276ffc69ac0d7fe50dc122963f207060b379bd74",
+    "praxis-identity-before-validator.json": "a5d0fbe37a3a1df5a143badc8a22ca2be993d13ee732b7c566074699c9f0c419",
+    "praxis-validator.json": "bdc89bc6c75c3456bfd9ba578b3796ae76fb46d6b05e500981dc6518c23937d4",
+    "probe-stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "probe-stdout.txt": "db03eb80ca2da23565325fc5e3954f22418d0e162a219a499e58387249c05635",
+    "proc-cgroup.txt": "3e3eb2a4a6d617858161983ab5922f2b9b8c2ff3563080f624df3521c15dc257",
+    "proc-fd.txt": "d45be6157dc2adc4cd9215c8df5731b5c6ecbca220ebc4fb064dec0b937d0a8b",
+    "proc-maps.txt": "7c45a5fa4dee0a03e8c9056b84d1d3079a6f129b3cac2d9316d3b8ded1f39ce8",
+    "proc-mountinfo.txt": "5413967062925752a4a25d1161dde9c84cffe5c11be6696dc5f52d846b1d6c51",
+    "proc-net-tcp-listener.txt": "7eafd8beeca2b5e912ff84088d2b3dc275a3063c172719cdc804ebb48cda15eb",
+    "proc-ns.txt": "ed1e9bffc4692dd7b8c3772f2a1d0c3ed0e5176e0d6d4c9942e16307e1dd954d",
+    "proc-status.txt": "8a9fd24b6f761c47be15685173df605a1f4066049fa0a2309fc81dce0e6b442f",
+    "protocol-archive-validation.json": "0ff7eb56393d964646d6c5a342018da3a5ac1efd570b30ba929450064131d380",
+    "protocol-snapshot.json": "eaacf6cf294813252c044515ebd1298d64454a53a59d8320dde2519052783742",
+    "signal-stress.json": "acdb3151d625a1a38ded3a16eb3980ef3d82955a0f5aeddfaedaca5632a738a4",
+    "toolchain-baseline.json": "9a765d8eda4a734f7252a33260eb5f1b691fc92f7d351a3ba0f476d84e171fc3",
+    "unexpected-observations.json": "8b90006f2a6772901adcace9e37796757221c33cbb67f2df6e994775f42444ee",
+    "verification.txt": "4c35ed0d13d5797650c8569f21f1a1d97c701f1e1f4365bb8db3520d3ccd51f4"
+  },
+  "experiment": "RF-A0-EPISTEMIC-CLOSURE",
+  "failure": null,
+  "governance_adoption": [],
+  "interpretation_layer": {
+    "artifact": "epistemic-outcomes.json",
+    "status": "PROPOSALS_ONLY"
+  },
+  "milestone": "RF-A0",
+  "observation_layer": {
+    "machine_checks": "gate-results.json",
+    "raw_artifacts": "raw_evidence"
+  },
+  "post_run": {
+    "project_state_sha256": "f7806a304860e4ad697643a70566b9eee8fdf3cf583d2ff99cc35fc469abb1b2",
+    "source_tree_sha256": "9931d826beff41b73d301feeee7f9d40eaa9a0200aad55a4d1300c92c31150c0"
+  },
+  "pre_run": {
+    "commitment": "commitment.json",
+    "project_state_sha256": "f7806a304860e4ad697643a70566b9eee8fdf3cf583d2ff99cc35fc469abb1b2",
+    "source_tree_sha256": "9931d826beff41b73d301feeee7f9d40eaa9a0200aad55a4d1300c92c31150c0"
+  },
+  "prediction_comparisons": [
+    {
+      "causal_boundary": "Only declared relevant checks contribute; global gate status is not an input.",
+      "comparison": "SUPPORTED",
+      "evidence_references": [
+        "praxis-identity-after-validator.json",
+        "praxis-identity-before-validator.json"
+      ],
+      "missing_check_ids": [],
+      "prediction_id": "RF-A0-E01",
+      "relevant_checks": [
+        {
+          "check_id": "RF-A0.PRAXIS.IDENTITY_OBSERVED",
+          "contradicting_results": [
+            "FAIL"
+          ],
+          "evidence": [
+            "praxis-identity-before-validator.json",
+            "praxis-identity-after-validator.json"
+          ],
+          "observed_result": "PASS",
+          "supporting_results": [
+            "PASS"
+          ]
+        }
+      ]
+    },
+    {
+      "causal_boundary": "Only declared relevant checks contribute; global gate status is not an input.",
+      "comparison": "SUPPORTED",
+      "evidence_references": [
+        "action-ctest.txt",
+        "tests/epistemic_model_test.py"
+      ],
+      "missing_check_ids": [],
+      "prediction_id": "RF-A0-E02",
+      "relevant_checks": [
+        {
+          "check_id": "RF-A0.EPISTEMIC.COMPARISON_MODEL",
+          "contradicting_results": [
+            "FAIL"
+          ],
+          "evidence": [
+            "action-ctest.txt",
+            "tests/epistemic_model_test.py"
+          ],
+          "observed_result": "PASS",
+          "supporting_results": [
+            "PASS"
+          ]
+        }
+      ]
+    },
+    {
+      "causal_boundary": "Only declared relevant checks contribute; global gate status is not an input.",
+      "comparison": "SUPPORTED",
+      "evidence_references": [
+        "action-ctest.txt",
+        "tests/epistemic_model_test.py"
+      ],
+      "missing_check_ids": [],
+      "prediction_id": "RF-A0-E03",
+      "relevant_checks": [
+        {
+          "check_id": "RF-A0.EPISTEMIC.UNEXPECTED_CHANNEL",
+          "contradicting_results": [
+            "FAIL"
+          ],
+          "evidence": [
+            "action-ctest.txt",
+            "tests/epistemic_model_test.py"
+          ],
+          "observed_result": "PASS",
+          "supporting_results": [
+            "PASS"
+          ]
+        }
+      ]
+    },
+    {
+      "causal_boundary": "Only declared relevant checks contribute; global gate status is not an input.",
+      "comparison": "SUPPORTED",
+      "evidence_references": [
+        "action-ctest.txt",
+        "tests/epistemic_model_test.py"
+      ],
+      "missing_check_ids": [],
+      "prediction_id": "RF-A0-E04",
+      "relevant_checks": [
+        {
+          "check_id": "RF-A0.EPISTEMIC.LEARNING_BOUNDARY",
+          "contradicting_results": [
+            "FAIL"
+          ],
+          "evidence": [
+            "action-ctest.txt",
+            "tests/epistemic_model_test.py"
+          ],
+          "observed_result": "PASS",
+          "supporting_results": [
+            "PASS"
+          ]
+        }
+      ]
+    },
+    {
+      "causal_boundary": "Only declared relevant checks contribute; global gate status is not an input.",
+      "comparison": "SUPPORTED",
+      "evidence_references": [
+        ".hoa/protocols/index.json",
+        "governance/historical-evidence-prefix.json",
+        "historical-integrity.json",
+        "protocol-archive-validation.json",
+        "protocol-snapshot.json"
+      ],
+      "missing_check_ids": [],
+      "prediction_id": "RF-A0-E05",
+      "relevant_checks": [
+        {
+          "check_id": "RF-A0.EPISTEMIC.PROTOCOL_ARCHIVE",
+          "contradicting_results": [
+            "FAIL"
+          ],
+          "evidence": [
+            "protocol-archive-validation.json",
+            ".hoa/protocols/index.json",
+            "protocol-snapshot.json"
+          ],
+          "observed_result": "PASS",
+          "supporting_results": [
+            "PASS"
+          ]
+        },
+        {
+          "check_id": "RF-A0.HISTORY.PREFIX_IMMUTABLE",
+          "contradicting_results": [
+            "FAIL"
+          ],
+          "evidence": [
+            "historical-integrity.json",
+            "governance/historical-evidence-prefix.json"
+          ],
+          "observed_result": "PASS",
+          "supporting_results": [
+            "PASS"
+          ]
+        }
+      ]
+    },
+    {
+      "causal_boundary": "Only declared relevant checks contribute; global gate status is not an input.",
+      "comparison": "SUPPORTED",
+      "evidence_references": [
+        "action-praxis-validator.txt",
+        "praxis-identity-before-validator.json",
+        "praxis-validator.json"
+      ],
+      "missing_check_ids": [],
+      "prediction_id": "RF-A0-H06",
+      "relevant_checks": [
+        {
+          "check_id": "RF-A0.PRAXIS.BOOTSTRAP_GAP",
+          "contradicting_results": [
+            "FAIL",
+            "UNEXPECTED_PASS"
+          ],
+          "evidence": [
+            "action-praxis-validator.txt",
+            "praxis-validator.json",
+            "praxis-identity-before-validator.json"
+          ],
+          "observed_result": "EXPECTED_FAIL_CLOSED",
+          "supporting_results": [
+            "EXPECTED_FAIL_CLOSED"
+          ]
+        }
+      ]
+    }
+  ],
+  "previous_chain_hash": "b05bc3d8246ac6a43d77c5a5a624ac7b9e4917f33282f7114f0b46639ab35cad",
+  "protocol_sha256": "eaacf6cf294813252c044515ebd1298d64454a53a59d8320dde2519052783742",
+  "protocol_snapshot": "protocol-snapshot.json",
+  "raw_evidence": [
+    "action-build.txt",
+    "action-cmake-version.txt",
+    "action-configure.txt",
+    "action-ctest.txt",
+    "action-git-diff-check.txt",
+    "action-git-head.txt",
+    "action-git-remote.txt",
+    "action-git-status.txt",
+    "action-praxis-head-after-validator.txt",
+    "action-praxis-head-before-validator.txt",
+    "action-praxis-status-after-validator.txt",
+    "action-praxis-status-before-validator.txt",
+    "action-praxis-validator.txt",
+    "action-runtime-observation.txt",
+    "analysis.md",
+    "commitment.json",
+    "epistemic-outcomes.json",
+    "gate-results.json",
+    "historical-integrity.json",
+    "launcher-cgroup.txt",
+    "launcher-ns.txt",
+    "observation.json",
+    "platform-baseline.json",
+    "praxis-identity-after-validator.json",
+    "praxis-identity-before-validator.json",
+    "praxis-validator.json",
+    "probe-stderr.txt",
+    "probe-stdout.txt",
+    "proc-cgroup.txt",
+    "proc-fd.txt",
+    "proc-maps.txt",
+    "proc-mountinfo.txt",
+    "proc-net-tcp-listener.txt",
+    "proc-ns.txt",
+    "proc-status.txt",
+    "protocol-archive-validation.json",
+    "protocol-snapshot.json",
+    "signal-stress.json",
+    "toolchain-baseline.json",
+    "unexpected-observations.json",
+    "verification.txt"
+  ],
+  "result": "PASS",
+  "run_id": "20260815T174612.471492Z-eaacf6cf2948",
+  "unexpected_observations": [],
+  "validation": "gate-results.json"
+}

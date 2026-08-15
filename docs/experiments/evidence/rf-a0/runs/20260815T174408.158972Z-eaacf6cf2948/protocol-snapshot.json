@@ -1,0 +1,132 @@
+{
+  "artifact": "srf-pre-observation-protocol/0.2",
+  "milestone": "RF-A0",
+  "experiment": "RF-A0-EPISTEMIC-CLOSURE",
+  "status": "fixed_before_decisive_observation",
+  "claim_boundary": "This protocol governs only the prospective closure-audit run. It does not reinterpret or mutate the three historical runs governed by protocol cba33aab... .",
+  "commitments": [
+    {
+      "id": "RF-A0-E01",
+      "question": "Is the material Praxis identity measured from the repository and files actually used?",
+      "prior_understanding": "Historical generated evidence included a source-coded Praxis commit value even though validator execution itself was real.",
+      "hypothesis": "Praxis HEAD, cleanliness, validator digest, helper digest, and schema digests can be observed read-only and bound to the same validator invocation.",
+      "prediction": "The new run will contain machine-readable Praxis identity evidence obtained from Git and file bytes, with no source-coded commit identity.",
+      "alternative_explanation": "Executing the correct path alone does not establish repository HEAD or file content identity.",
+      "contradiction_condition": "Identity fields are absent, hardcoded, inconsistent with direct remeasurement, or refer to a different validator/schema instance.",
+      "comparison_contract": [
+        {
+          "check_id": "RF-A0.PRAXIS.IDENTITY_OBSERVED",
+          "supporting_results": ["PASS"],
+          "contradicting_results": ["FAIL"]
+        }
+      ]
+    },
+    {
+      "id": "RF-A0-E02",
+      "question": "Are prediction comparisons causally specific rather than derived from global gate status?",
+      "prior_understanding": "The historical comparisons_for(result) assigned one status to every prediction.",
+      "hypothesis": "Per-prediction contracts can map only relevant check IDs and evidence to SUPPORTED, CONTRADICTED, or INCONCLUSIVE independently.",
+      "prediction": "Focused tests will demonstrate mixed outcomes in one comparison set, and the new run record will carry check/evidence traceability for each prediction.",
+      "alternative_explanation": "A richer-looking record could still derive every comparison from one global result.",
+      "contradiction_condition": "The model accepts global status as an input, unrelated checks affect a prediction, or synthetic mixed outcomes cannot be represented.",
+      "comparison_contract": [
+        {
+          "check_id": "RF-A0.EPISTEMIC.COMPARISON_MODEL",
+          "supporting_results": ["PASS"],
+          "contradicting_results": ["FAIL"]
+        }
+      ]
+    },
+    {
+      "id": "RF-A0-E03",
+      "question": "Can the run machinery operationally record unexpected evidence?",
+      "prior_understanding": "Historical run records always assigned a literal empty list.",
+      "hypothesis": "Actual runtime, Praxis, platform, and evidence outcomes can feed a classifier whose empty result means no configured anomaly was observed.",
+      "prediction": "Focused tests will inject synthetic anomalies and obtain classified records, while the decisive run will derive—not hardcode—its own list.",
+      "alternative_explanation": "A schema field may exist without any production path capable of populating it.",
+      "contradiction_condition": "Synthetic anomalies cannot populate the channel or production still assigns an unconditional empty list.",
+      "comparison_contract": [
+        {
+          "check_id": "RF-A0.EPISTEMIC.UNEXPECTED_CHANNEL",
+          "supporting_results": ["PASS"],
+          "contradicting_results": ["FAIL"]
+        }
+      ]
+    },
+    {
+      "id": "RF-A0-E04",
+      "question": "Does machine-generated candidate learning remain evidence-dependent and non-governing?",
+      "prior_understanding": "Historical candidate_learning was a fixed prose list emitted independently of individual comparison evidence.",
+      "hypothesis": "Candidate proposals can be emitted only when their declared prediction dependencies are supported and can carry explicit non-adoption authority.",
+      "prediction": "Tests will show unsupported dependencies suppress a proposal, and emitted proposals will cite comparisons/evidence with governance_adoption set to none.",
+      "alternative_explanation": "Renaming a fixed learning list would not repair its epistemic authority.",
+      "contradiction_condition": "A proposal appears without supported dependencies/evidence or receives project/Praxis adoption automatically.",
+      "comparison_contract": [
+        {
+          "check_id": "RF-A0.EPISTEMIC.LEARNING_BOUNDARY",
+          "supporting_results": ["PASS"],
+          "contradicting_results": ["FAIL"]
+        }
+      ]
+    },
+    {
+      "id": "RF-A0-E05",
+      "question": "Are historical evidence and exact committed protocol bytes reconstructible without rewriting past runs?",
+      "prior_understanding": "The historical chain validates, but its protocol was recoverable only from the current mutable protocol path.",
+      "hypothesis": "Content-addressed protocol archives plus immutable-prefix verification can preserve bytes and detect changes without editing historical records.",
+      "prediction": "Both historical and new protocol digests will recompute from archives, each new run will contain its exact snapshot, and all 93 historical files will retain their pre-audit aggregate digest.",
+      "alternative_explanation": "A digest without retained bytes cannot reconstruct content after the current file changes.",
+      "contradiction_condition": "An archive digest differs, a run lacks its snapshot, or any historical record/hash/content digest changes.",
+      "comparison_contract": [
+        {
+          "check_id": "RF-A0.EPISTEMIC.PROTOCOL_ARCHIVE",
+          "supporting_results": ["PASS"],
+          "contradicting_results": ["FAIL"]
+        },
+        {
+          "check_id": "RF-A0.HISTORY.PREFIX_IMMUTABLE",
+          "supporting_results": ["PASS"],
+          "contradicting_results": ["FAIL"]
+        }
+      ]
+    },
+    {
+      "id": "RF-A0-H06",
+      "question": "Can Praxis 0.1 truthfully represent a governed project before its first authorized commit?",
+      "prior_understanding": "The schema requires nonempty last-verified provenance, and the unchanged validator requires a referenced gate/evidence plus commit ancestry.",
+      "hypothesis": "No truthful SRF representation can satisfy the current generic validator while the project has no verified milestone, no HEAD, and no authority to commit.",
+      "prediction": "The actually observed current Praxis validator will fail closed against the honest SRF pre-history state.",
+      "alternative_explanation": "Praxis may have changed since the historical observation, so identity and actual output must outrank the expected narrative.",
+      "contradiction_condition": "The observed validator passes, crashes, changes relevant identity during the run, or fails for an outcome other than the predicted pre-history boundary.",
+      "comparison_contract": [
+        {
+          "check_id": "RF-A0.PRAXIS.BOOTSTRAP_GAP",
+          "supporting_results": ["EXPECTED_FAIL_CLOSED"],
+          "contradicting_results": ["FAIL", "UNEXPECTED_PASS"]
+        }
+      ]
+    }
+  ],
+  "candidate_learning_contracts": [
+    {
+      "id": "RF-A0-CL01",
+      "depends_on": ["RF-A0-E01"],
+      "proposal": "Material external identities should be observed from the dependency instance actually used, not asserted in project source."
+    },
+    {
+      "id": "RF-A0-CL02",
+      "depends_on": ["RF-A0-E02", "RF-A0-E03", "RF-A0-E04"],
+      "proposal": "Reflexive run records should preserve independent comparisons, operational anomaly capture, and evidence-dependent non-governing learning proposals."
+    },
+    {
+      "id": "RF-A0-CL03",
+      "depends_on": ["RF-A0-E05"],
+      "proposal": "Digest commitments require recoverable content snapshots when Git history or an external archive is absent."
+    },
+    {
+      "id": "RF-A0-CL04",
+      "depends_on": ["RF-A0-H06"],
+      "proposal": "The Praxis bootstrap representation gap remains a candidate for separate Praxis evaluation under the exact observed Praxis identity."
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+0 -> /dev/null
+1 -> pipe:[199675]
+2 -> pipe:[199676]
+3 -> anon_inode:[signalfd]
+4 -> /home/jpereiratrindade/dev/cpp/sister-runtime-foundations/.build/runs/20260815T165109.608933Z-cba33aabff5e/rf-a0-opened-by-probe.dat
+5 -> socket:[200874]

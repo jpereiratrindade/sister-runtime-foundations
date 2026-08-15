@@ -1,0 +1,9 @@
+{
+  "all_controlled": true,
+  "claim_boundary": "Repeated stress increases sensitivity to the prior race but is not a mathematical proof of concurrency correctness.",
+  "completed_at_utc": "2026-08-15T16:51:50.354026+00:00",
+  "completed_iterations": 128,
+  "failure": null,
+  "requested_iterations": 128,
+  "started_at_utc": "2026-08-15T16:51:49.715862+00:00"
+}

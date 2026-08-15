@@ -1,0 +1,16 @@
+probe=srf-runtime-probe
+pid=33263
+ppid=33262
+uid=1000
+gid=1000
+cwd=/home/jpereiratrindade/dev/cpp/sister-runtime-foundations
+environment.SRF_PROBE_CONTEXT=rf-a0-native-baseline
+regular_file=/home/jpereiratrindade/dev/cpp/sister-runtime-foundations/.build/rf-a0/rf-a0-opened-by-probe.dat
+regular_fd=3
+listen_address=127.0.0.1
+listen_port=36827
+socket_fd=4
+open_fds=0,1,2,3,4
+ready=1
+shutdown_signal=15
+shutdown=controlled

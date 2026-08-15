@@ -1,0 +1,35 @@
+00400000-00405000 r-xp 00000000 00:22 2874290                            /home/jpereiratrindade/dev/cpp/sister-runtime-foundations/.build/rf-a0/srf-runtime-probe
+00405000-0040a000 r--p 00005000 00:22 2874290                            /home/jpereiratrindade/dev/cpp/sister-runtime-foundations/.build/rf-a0/srf-runtime-probe
+0040a000-0040b000 r--p 00009000 00:22 2874290                            /home/jpereiratrindade/dev/cpp/sister-runtime-foundations/.build/rf-a0/srf-runtime-probe
+0040b000-0040c000 rw-p 0000a000 00:22 2874290                            /home/jpereiratrindade/dev/cpp/sister-runtime-foundations/.build/rf-a0/srf-runtime-probe
+0601a000-0604d000 rw-p 00000000 00:00 0                                  [heap]
+7f471b5da000-7f471b74c000 r-xp 00000000 00:22 6811275                    /usr/lib64/libc.so.6
+7f471b74c000-7f471b7c5000 r--p 00172000 00:22 6811275                    /usr/lib64/libc.so.6
+7f471b7c5000-7f471b7c9000 r--p 001eb000 00:22 6811275                    /usr/lib64/libc.so.6
+7f471b7c9000-7f471b7cb000 rw-p 001ef000 00:22 6811275                    /usr/lib64/libc.so.6
+7f471b7cb000-7f471b7d3000 rw-p 00000000 00:00 0
+7f471b7d3000-7f471b7f7000 r-xp 00000000 00:22 5850392                    /usr/lib64/libgcc_s-16-20260515.so.1
+7f471b7f7000-7f471b7fe000 r--p 00024000 00:22 5850392                    /usr/lib64/libgcc_s-16-20260515.so.1
+7f471b7fe000-7f471b7ff000 r--p 0002b000 00:22 5850392                    /usr/lib64/libgcc_s-16-20260515.so.1
+7f471b7ff000-7f471b800000 rw-p 00000000 00:00 0
+7f471b800000-7f471b972000 r-xp 00000000 00:22 5864164                    /usr/lib64/libstdc++.so.6.0.35
+7f471b972000-7f471ba9d000 r--p 00172000 00:22 5864164                    /usr/lib64/libstdc++.so.6.0.35
+7f471ba9d000-7f471baae000 r--p 0029d000 00:22 5864164                    /usr/lib64/libstdc++.so.6.0.35
+7f471baae000-7f471baaf000 rw-p 002ae000 00:22 5864164                    /usr/lib64/libstdc++.so.6.0.35
+7f471baaf000-7f471bab3000 rw-p 00000000 00:00 0
+7f471bab8000-7f471babc000 rw-p 00000000 00:00 0
+7f471babc000-7f471bb4b000 r-xp 00000000 00:22 6811277                    /usr/lib64/libm.so.6
+7f471bb4b000-7f471bbd1000 r--p 0008f000 00:22 6811277                    /usr/lib64/libm.so.6
+7f471bbd1000-7f471bbd2000 r--p 00114000 00:22 6811277                    /usr/lib64/libm.so.6
+7f471bbd2000-7f471bbd3000 rw-p 00115000 00:22 6811277                    /usr/lib64/libm.so.6
+7f471bbd3000-7f471bbd5000 rw-p 00000000 00:00 0
+7f471bbf7000-7f471bbfb000 r--p 00000000 00:00 0                          [vvar]
+7f471bbfb000-7f471bbfd000 r--p 00000000 00:00 0                          [vvar_vclock]
+7f471bbfd000-7f471bbff000 r-xp 00000000 00:00 0                          [vdso]
+7f471bbff000-7f471bc2a000 r-xp 00000000 00:22 6811272                    /usr/lib64/ld-linux-x86-64.so.2
+7f471bc2a000-7f471bc36000 r--p 0002b000 00:22 6811272                    /usr/lib64/ld-linux-x86-64.so.2
+7f471bc36000-7f471bc38000 r--p 00037000 00:22 6811272                    /usr/lib64/ld-linux-x86-64.so.2
+7f471bc38000-7f471bc39000 rw-p 00039000 00:22 6811272                    /usr/lib64/ld-linux-x86-64.so.2
+7f471bc39000-7f471bc3a000 rw-p 00000000 00:00 0
+7fff142f5000-7fff14317000 rw-p 00000000 00:00 0                          [stack]
+ffffffffff600000-ffffffffff601000 --xp 00000000 00:00 0                  [vsyscall]

@@ -1,0 +1,28 @@
+{
+  "artifact": "srf-external-execution-authority/0.1",
+  "scope": "project-owned Python verification, evidence, and test programs",
+  "default": "deny",
+  "shell_execution": "forbidden",
+  "dynamic_command_strings": "forbidden",
+  "roles": {
+    "cmake.version": "Resolve CMake and request only its version.",
+    "cmake.configure": "Configure this project into a fresh directory below .build with the two declared options.",
+    "cmake.build": "Build only a directory below .build with parallel scheduling.",
+    "ctest.run": "Run CTest only against a directory below .build with failure output enabled.",
+    "git.remote": "List configured remotes without mutation.",
+    "git.head": "Read whether HEAD resolves.",
+    "git.status": "Read porcelain working-tree state.",
+    "git.diff_check": "Run Git's non-mutating whitespace check.",
+    "git.praxis_head": "Observe the exact Praxis Git HEAD used by the run.",
+    "git.praxis_status": "Observe the Praxis working-tree state without mutation.",
+    "python.collector": "Run exactly the project RF-A0 collector against the built probe and the current run directory.",
+    "python.praxis_validator": "Run exactly the current sibling Praxis governed-project validator against SRF.",
+    "probe.run": "Run the built srf-runtime-probe with an experiment file below .build and ephemeral loopback port."
+  },
+  "delegation_boundary": "CMake legitimately launches the configured compiler and linker as children of the build system. This policy bounds commands launched directly by project-owned Python code; it does not pretend to enumerate CMake's internal build graph.",
+  "limitations": [
+    "Static inspection proves only the subprocess call-site structure understood by the gate.",
+    "Executable and argument allowlisting bounds direct launch authority but cannot prove semantic behavior of an allowed external program.",
+    "The operating system and pre-existing tool installations remain environmental authorities outside the repository."
+  ]
+}

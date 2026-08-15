@@ -1,0 +1,17 @@
+{
+  "artifact": "srf-content-addressed-protocol-index/0.1",
+  "digest_algorithm": "sha256",
+  "entries": [
+    {
+      "sha256": "cba33aabff5e45d499f097bac16bda6fb33cef5add32924d906be89bda074e40",
+      "archive": ".hoa/protocols/archive/sha256-cba33aabff5e45d499f097bac16bda6fb33cef5add32924d906be89bda074e40.json",
+      "archival_provenance": "Exact current bytes were copied prospectively during the epistemic closure audit; this archive did not exist when the historical runs occurred."
+    },
+    {
+      "sha256": "eaacf6cf294813252c044515ebd1298d64454a53a59d8320dde2519052783742",
+      "archive": ".hoa/protocols/archive/sha256-eaacf6cf294813252c044515ebd1298d64454a53a59d8320dde2519052783742.json",
+      "archival_provenance": "Archived before the first decisive epistemic-closure observation."
+    }
+  ],
+  "claim_boundary": "The index records recoverable content by digest. It does not make the archives contemporaneous with runs that predated archival creation."
+}

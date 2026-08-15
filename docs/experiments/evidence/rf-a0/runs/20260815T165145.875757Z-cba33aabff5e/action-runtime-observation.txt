@@ -1,0 +1,9 @@
+PASS process identity correlated through /proc
+PASS regular file descriptor externally observable
+PASS loopback listener correlated by descriptor, inode, TCP row, and connection
+PASS launcher/probe namespace links compared
+PASS launcher/probe cgroup records compared
+PASS required /proc observations collected
+PASS SIGTERM caused controlled shutdown without forced kill
+evidence=/home/jpereiratrindade/dev/cpp/sister-runtime-foundations/docs/experiments/evidence/rf-a0/runs/20260815T165145.875757Z-cba33aabff5e
+pid_observed=36517

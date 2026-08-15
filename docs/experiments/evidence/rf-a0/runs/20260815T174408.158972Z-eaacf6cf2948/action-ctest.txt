@@ -1,0 +1,9 @@
+Test project /home/jpereiratrindade/dev/cpp/sister-runtime-foundations/.build/runs/20260815T174408.158972Z-eaacf6cf2948
+    Start 1: runtime-probe-integration
+1/2 Test #1: runtime-probe-integration ........   Passed    0.39 sec
+    Start 2: epistemic-model
+2/2 Test #2: epistemic-model ..................   Passed    0.04 sec
+
+100% tests passed, 0 tests failed out of 2
+
+Total Test time (real) =   0.43 sec

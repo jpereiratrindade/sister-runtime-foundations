@@ -1,0 +1,31 @@
+{
+  "artifact": "srf-experimental-run-ledger/0.1",
+  "entries": [
+    {
+      "chain_hash": "4bd27383b3f4a813ed05f965f26699ff0b8dcf181fe9f4e5b4e95d8ff0aba783",
+      "record": "runs/20260815T164756.673426Z-cba33aabff5e/run-record.json",
+      "run_id": "20260815T164756.673426Z-cba33aabff5e"
+    },
+    {
+      "chain_hash": "696a1eaef66c1b44a8a8e6dabdbbb4d0ca451947db661c3aa10a819a3b56ca16",
+      "record": "runs/20260815T165109.608933Z-cba33aabff5e/run-record.json",
+      "run_id": "20260815T165109.608933Z-cba33aabff5e"
+    },
+    {
+      "chain_hash": "fc6d758e6a04d07451b9d86af45be1ef33b23d61731c124ee0140b1e72894fcc",
+      "record": "runs/20260815T165145.875757Z-cba33aabff5e/run-record.json",
+      "run_id": "20260815T165145.875757Z-cba33aabff5e"
+    },
+    {
+      "chain_hash": "b05bc3d8246ac6a43d77c5a5a624ac7b9e4917f33282f7114f0b46639ab35cad",
+      "record": "runs/20260815T174408.158972Z-eaacf6cf2948/run-record.json",
+      "run_id": "20260815T174408.158972Z-eaacf6cf2948"
+    },
+    {
+      "chain_hash": "c97bdd0e12e4f7c2295739fb52e4a46f0b7c2b081909570fbb999375de8919e5",
+      "record": "runs/20260815T174612.471492Z-eaacf6cf2948/run-record.json",
+      "run_id": "20260815T174612.471492Z-eaacf6cf2948"
+    }
+  ],
+  "genesis_hash": "0000000000000000000000000000000000000000000000000000000000000000"
+}

@@ -1,0 +1,5 @@
+0 -> /dev/null
+1 -> pipe:[183256]
+2 -> pipe:[183257]
+3 -> /home/jpereiratrindade/dev/cpp/sister-runtime-foundations/.build/rf-a0/rf-a0-opened-by-probe.dat
+4 -> socket:[184689]

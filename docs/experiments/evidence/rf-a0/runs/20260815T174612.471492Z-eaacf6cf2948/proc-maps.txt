@@ -1,0 +1,34 @@
+00400000-00405000 r-xp 00000000 00:22 2879460                            /home/jpereiratrindade/dev/cpp/sister-runtime-foundations/.build/runs/20260815T174612.471492Z-eaacf6cf2948/srf-runtime-probe
+00405000-0040a000 r--p 00005000 00:22 2879460                            /home/jpereiratrindade/dev/cpp/sister-runtime-foundations/.build/runs/20260815T174612.471492Z-eaacf6cf2948/srf-runtime-probe
+0040a000-0040b000 r--p 00009000 00:22 2879460                            /home/jpereiratrindade/dev/cpp/sister-runtime-foundations/.build/runs/20260815T174612.471492Z-eaacf6cf2948/srf-runtime-probe
+0040b000-0040c000 rw-p 0000a000 00:22 2879460                            /home/jpereiratrindade/dev/cpp/sister-runtime-foundations/.build/runs/20260815T174612.471492Z-eaacf6cf2948/srf-runtime-probe
+0caab000-0cade000 rw-p 00000000 00:00 0                                  [heap]
+7f4a7bcf0000-7f4a7be62000 r-xp 00000000 00:22 6811275                    /usr/lib64/libc.so.6
+7f4a7be62000-7f4a7bedb000 r--p 00172000 00:22 6811275                    /usr/lib64/libc.so.6
+7f4a7bedb000-7f4a7bedf000 r--p 001eb000 00:22 6811275                    /usr/lib64/libc.so.6
+7f4a7bedf000-7f4a7bee1000 rw-p 001ef000 00:22 6811275                    /usr/lib64/libc.so.6
+7f4a7bee1000-7f4a7bee9000 rw-p 00000000 00:00 0
+7f4a7bee9000-7f4a7bf78000 r-xp 00000000 00:22 6811277                    /usr/lib64/libm.so.6
+7f4a7bf78000-7f4a7bffe000 r--p 0008f000 00:22 6811277                    /usr/lib64/libm.so.6
+7f4a7bffe000-7f4a7bfff000 r--p 00114000 00:22 6811277                    /usr/lib64/libm.so.6
+7f4a7bfff000-7f4a7c000000 rw-p 00115000 00:22 6811277                    /usr/lib64/libm.so.6
+7f4a7c000000-7f4a7c172000 r-xp 00000000 00:22 5864164                    /usr/lib64/libstdc++.so.6.0.35
+7f4a7c172000-7f4a7c29d000 r--p 00172000 00:22 5864164                    /usr/lib64/libstdc++.so.6.0.35
+7f4a7c29d000-7f4a7c2ae000 r--p 0029d000 00:22 5864164                    /usr/lib64/libstdc++.so.6.0.35
+7f4a7c2ae000-7f4a7c2af000 rw-p 002ae000 00:22 5864164                    /usr/lib64/libstdc++.so.6.0.35
+7f4a7c2af000-7f4a7c2b3000 rw-p 00000000 00:00 0
+7f4a7c377000-7f4a7c37b000 rw-p 00000000 00:00 0
+7f4a7c37b000-7f4a7c39f000 r-xp 00000000 00:22 5850392                    /usr/lib64/libgcc_s-16-20260515.so.1
+7f4a7c39f000-7f4a7c3a6000 r--p 00024000 00:22 5850392                    /usr/lib64/libgcc_s-16-20260515.so.1
+7f4a7c3a6000-7f4a7c3a7000 r--p 0002b000 00:22 5850392                    /usr/lib64/libgcc_s-16-20260515.so.1
+7f4a7c3a7000-7f4a7c3aa000 rw-p 00000000 00:00 0
+7f4a7c3cc000-7f4a7c3d0000 r--p 00000000 00:00 0                          [vvar]
+7f4a7c3d0000-7f4a7c3d2000 r--p 00000000 00:00 0                          [vvar_vclock]
+7f4a7c3d2000-7f4a7c3d4000 r-xp 00000000 00:00 0                          [vdso]
+7f4a7c3d4000-7f4a7c3ff000 r-xp 00000000 00:22 6811272                    /usr/lib64/ld-linux-x86-64.so.2
+7f4a7c3ff000-7f4a7c40b000 r--p 0002b000 00:22 6811272                    /usr/lib64/ld-linux-x86-64.so.2
+7f4a7c40b000-7f4a7c40d000 r--p 00037000 00:22 6811272                    /usr/lib64/ld-linux-x86-64.so.2
+7f4a7c40d000-7f4a7c40e000 rw-p 00039000 00:22 6811272                    /usr/lib64/ld-linux-x86-64.so.2
+7f4a7c40e000-7f4a7c40f000 rw-p 00000000 00:00 0
+7fff26002000-7fff26024000 rw-p 00000000 00:00 0                          [stack]
+ffffffffff600000-ffffffffff601000 --xp 00000000 00:00 0                  [vsyscall]

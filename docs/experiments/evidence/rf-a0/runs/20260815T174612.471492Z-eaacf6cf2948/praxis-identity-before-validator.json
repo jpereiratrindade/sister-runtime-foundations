@@ -1,0 +1,28 @@
+{
+  "files": {
+    "experiment_record_schema": {
+      "path": "contracts/methodology/experiment-record.schema.json",
+      "sha256": "e24d9f98bf391310790b077ccafa3eddf1a61d47aeb2fc0171f5648792b74d46"
+    },
+    "project_state_schema": {
+      "path": "contracts/methodology/project-state.schema.json",
+      "sha256": "f7771bd32acd3bd279ca6e813f1c722d5f19d9c97ffcd85dfe62701e6e0bf20d"
+    },
+    "schema_helper": {
+      "path": "scripts/governed_method_schema.py",
+      "sha256": "4a733ee291afbdd2af0dace9fdd5fadce3ec2d6951b8bb69818d8a2b621ccf07"
+    },
+    "validator": {
+      "path": "scripts/validate_governed_project.py",
+      "sha256": "df1e6f4a9f6263861c62c68527a0a219b9926535e6cf9d62999da8a7bc8109cc"
+    }
+  },
+  "git_head": "e0532b8f5b9861c3047c0f1ab6173048cb445068",
+  "git_head_exit_status": 0,
+  "git_status_exit_status": 0,
+  "git_status_porcelain": "",
+  "observation_method": "read-only Git commands plus SHA-256 over the exact validator/helper/schema bytes used by this run",
+  "observed_at_utc": "2026-08-15T17:46:12.489387+00:00",
+  "repository": "/home/jpereiratrindade/dev/cpp/Praxis",
+  "working_tree_clean": true
+}

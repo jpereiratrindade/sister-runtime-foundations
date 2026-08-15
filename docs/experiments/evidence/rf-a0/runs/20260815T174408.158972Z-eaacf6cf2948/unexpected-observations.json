@@ -1,0 +1,14 @@
+{
+  "derived_from_run_outcomes": true,
+  "empty_meaning": null,
+  "observations": [
+    {
+      "classification": "possible_methodological_issue",
+      "evidence": "gate-results.json;verification.txt",
+      "id": "RF-A0-U08",
+      "observation": "The gate encountered a failure: RF-A0.INTEGRITY.UNTRACKED_TEXT: governance/inputs/005-rf-a0-epistemic-closure-audit.md:3:trailing whitespace; governance/inputs/005-rf-a0-epistemic-closure-audit.md:4:trailing whitespace; governance/inputs/005-rf-a0-epistemic-closure-audit.md:5:trailing whitespace; governance/inputs/005-rf-a0-epistemic-closure-audit.md:6:trailing whitespace; governance/inputs/005-rf-a0-epistemic-closure-audit.md:7:trailing whitespace; governance/inputs/005-rf-a0-epistemic-closure-audit.md:8:trailing whitespace; governance/inputs/005-rf-a0-epistemic-closure-audit.md:9:trailing whitespace",
+      "scope_consequence": "record_only",
+      "status": "UNRESOLVED"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "actual_compile_command": "/usr/bin/c++   -g -std=c++23 -Wall -Wextra -Wpedantic -Werror -Wconversion -Wsign-conversion -o CMakeFiles/srf-runtime-probe.dir/src/runtime_probe.cpp.o -c /home/jpereiratrindade/dev/cpp/sister-runtime-foundations/src/runtime_probe.cpp",
+  "cmake": "cmake version 4.3.0",
+  "compiler": "/usr/bin/c++",
+  "compiler_id": "GNU",
+  "compiler_version": "16.1.1",
+  "cxx_extensions": false,
+  "cxx_standard_requested": "23",
+  "language_contract": "C++23",
+  "standard_library_capability_contract": "Only facilities actually used by RF-A0; no claim of complete C++23 library support."
+}

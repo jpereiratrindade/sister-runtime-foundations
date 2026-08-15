@@ -1,0 +1,4 @@
+FAIL  gate missing — NONE
+PASS  canonical state — .hoa/project-state.yaml
+PASS  canonical state conforms to project-state.schema.json
+PASS  governance method — praxis-governed-engineering/0.1

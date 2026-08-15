@@ -1,0 +1,283 @@
+{
+  "actions": [
+    {
+      "argv": [
+        "git",
+        "remote"
+      ],
+      "authority_role": "git.remote",
+      "completed_at_utc": "2026-08-15T16:51:45.946303+00:00",
+      "exit_status": 0,
+      "id": "git-remote",
+      "output": "action-git-remote.txt",
+      "started_at_utc": "2026-08-15T16:51:45.943857+00:00"
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "--verify",
+        "HEAD"
+      ],
+      "authority_role": "git.head",
+      "completed_at_utc": "2026-08-15T16:51:45.948555+00:00",
+      "exit_status": 128,
+      "id": "git-head",
+      "output": "action-git-head.txt",
+      "started_at_utc": "2026-08-15T16:51:45.946484+00:00"
+    },
+    {
+      "argv": [
+        "git",
+        "status",
+        "--porcelain",
+        "--untracked-files=all"
+      ],
+      "authority_role": "git.status",
+      "completed_at_utc": "2026-08-15T16:51:45.952586+00:00",
+      "exit_status": 0,
+      "id": "git-status",
+      "output": "action-git-status.txt",
+      "started_at_utc": "2026-08-15T16:51:45.948743+00:00"
+    },
+    {
+      "argv": [
+        "cmake",
+        "--version"
+      ],
+      "authority_role": "cmake.version",
+      "completed_at_utc": "2026-08-15T16:51:45.962482+00:00",
+      "exit_status": 0,
+      "id": "cmake-version",
+      "output": "action-cmake-version.txt",
+      "started_at_utc": "2026-08-15T16:51:45.952855+00:00"
+    },
+    {
+      "argv": [
+        "cmake",
+        "-S",
+        "/home/jpereiratrindade/dev/cpp/sister-runtime-foundations",
+        "-B",
+        "/home/jpereiratrindade/dev/cpp/sister-runtime-foundations/.build/runs/20260815T165145.875757Z-cba33aabff5e",
+        "-DCMAKE_BUILD_TYPE=Debug",
+        "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON"
+      ],
+      "authority_role": "cmake.configure",
+      "completed_at_utc": "2026-08-15T16:51:46.619159+00:00",
+      "exit_status": 0,
+      "id": "configure",
+      "output": "action-configure.txt",
+      "started_at_utc": "2026-08-15T16:51:45.962899+00:00"
+    },
+    {
+      "argv": [
+        "cmake",
+        "--build",
+        "/home/jpereiratrindade/dev/cpp/sister-runtime-foundations/.build/runs/20260815T165145.875757Z-cba33aabff5e",
+        "--parallel"
+      ],
+      "authority_role": "cmake.build",
+      "completed_at_utc": "2026-08-15T16:51:49.163088+00:00",
+      "exit_status": 0,
+      "id": "build",
+      "output": "action-build.txt",
+      "started_at_utc": "2026-08-15T16:51:46.619421+00:00"
+    },
+    {
+      "argv": [
+        "ctest",
+        "--test-dir",
+        "/home/jpereiratrindade/dev/cpp/sister-runtime-foundations/.build/runs/20260815T165145.875757Z-cba33aabff5e",
+        "--output-on-failure"
+      ],
+      "authority_role": "ctest.run",
+      "completed_at_utc": "2026-08-15T16:51:49.618710+00:00",
+      "exit_status": 0,
+      "id": "ctest",
+      "output": "action-ctest.txt",
+      "started_at_utc": "2026-08-15T16:51:49.165771+00:00"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/home/jpereiratrindade/dev/cpp/sister-runtime-foundations/scripts/collect_rf_a0_evidence.py",
+        "/home/jpereiratrindade/dev/cpp/sister-runtime-foundations/.build/runs/20260815T165145.875757Z-cba33aabff5e/srf-runtime-probe",
+        "/home/jpereiratrindade/dev/cpp/sister-runtime-foundations/docs/experiments/evidence/rf-a0/runs/20260815T165145.875757Z-cba33aabff5e"
+      ],
+      "authority_role": "python.collector",
+      "completed_at_utc": "2026-08-15T16:51:50.368884+00:00",
+      "exit_status": 0,
+      "id": "runtime-observation",
+      "output": "action-runtime-observation.txt",
+      "started_at_utc": "2026-08-15T16:51:49.619316+00:00"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/home/jpereiratrindade/dev/cpp/Praxis/scripts/validate_governed_project.py",
+        "/home/jpereiratrindade/dev/cpp/sister-runtime-foundations"
+      ],
+      "authority_role": "python.praxis_validator",
+      "completed_at_utc": "2026-08-15T16:51:50.457180+00:00",
+      "exit_status": 1,
+      "id": "praxis-validator",
+      "output": "action-praxis-validator.txt",
+      "started_at_utc": "2026-08-15T16:51:50.369467+00:00"
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "authority_role": "git.diff_check",
+      "completed_at_utc": "2026-08-15T16:51:50.459942+00:00",
+      "exit_status": 0,
+      "id": "git-diff-check",
+      "output": "action-git-diff-check.txt",
+      "started_at_utc": "2026-08-15T16:51:50.457606+00:00"
+    }
+  ],
+  "artifact": "srf-decisive-experimental-run/0.1",
+  "candidate_learning": [
+    "signalfd removes the identified handler-flag/poll lost-wakeup ordering",
+    "Fedora/toolchain identity bounds the platform claim",
+    "protocol commitments establish narrow within-run temporal ordering",
+    "centralized allowlisting bounds project-script subprocess authority",
+    "Praxis pre-history representation remains an external method gap candidate"
+  ],
+  "chain_hash": "fc6d758e6a04d07451b9d86af45be1ef33b23d61731c124ee0140b1e72894fcc",
+  "evidence_sha256": {
+    "action-build.txt": "383256f7ff26285357a5b66696eaeb16420f51f84c196d0ef383b0ceeaa4a716",
+    "action-cmake-version.txt": "6b8c2501a983639b330c555c9a105057ea877b701cf25920bc3fe32dd2a54b13",
+    "action-configure.txt": "e77623d35412c25a0113c3dabbcb889a1aa39e08144d6a923321ceb6874942af",
+    "action-ctest.txt": "cd6e54d5cda45cfa23fcc334f76c823a1e05edf0b5f461c513c1c743853f9729",
+    "action-git-diff-check.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "action-git-head.txt": "9b3fab22fc89a33cf7f4e9d08072e43f29c2999ed2af63b6e8417b2ce9d534b4",
+    "action-git-remote.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "action-git-status.txt": "1778c08f197fd9f5bad23446c0423d0131ba0ee9afc00989513e74d8be0aa3ba",
+    "action-praxis-validator.txt": "20f4daf6d18ecafb4558c7b9fed978e4e71fbb7060d852a2997a3f0cbcfd659c",
+    "action-runtime-observation.txt": "1a47fd4b57eeb54778b7270d0cc1558bb5a177ab81a23154870f3336edd64eea",
+    "analysis.md": "6eda9d4b97ef8bd035fc83322524cf236eeb890df48bcd9d5f61c396f6ba3b09",
+    "commitment.json": "1924203180cddfe4e604283b7955b6944410b571f41a90372937da0d16eda76a",
+    "gate-results.json": "14edd7c2e00a7c75199cfcff26fb9f07a07b76ec1af830a91ad9a68439f85dab",
+    "launcher-cgroup.txt": "3e3eb2a4a6d617858161983ab5922f2b9b8c2ff3563080f624df3521c15dc257",
+    "launcher-ns.txt": "ed1e9bffc4692dd7b8c3772f2a1d0c3ed0e5176e0d6d4c9942e16307e1dd954d",
+    "observation.json": "348a2d9e009faa46f1cde6ea566624237f381c022c19520d8458e4e34ed34ea9",
+    "platform-baseline.json": "7e2b886f73c9af7d2db7633aa74f7b7cd50f58c1df5b0d9e0c4e984cd6596922",
+    "praxis-validator.json": "f0f68b3617acace6ded95b9f0209327734eaf1683d9d302b93c57606e2d21f49",
+    "probe-stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "probe-stdout.txt": "1b617bfa4c79d4faec925ef295c2a336c3202beff5ea7aeea01714459711c8ba",
+    "proc-cgroup.txt": "3e3eb2a4a6d617858161983ab5922f2b9b8c2ff3563080f624df3521c15dc257",
+    "proc-fd.txt": "c1f0a22c9255f7ed812631ea5e09866edf04994460647b372855b2848487da8e",
+    "proc-maps.txt": "b84f0c8d59a191326e71c71daff640cc513e84506fcdc8ae85acb2df690742fc",
+    "proc-mountinfo.txt": "5413967062925752a4a25d1161dde9c84cffe5c11be6696dc5f52d846b1d6c51",
+    "proc-net-tcp-listener.txt": "a5ba5227508c8fc701878e1e9c9b0496262b82686936f89bd4ee7ef291aae69f",
+    "proc-ns.txt": "ed1e9bffc4692dd7b8c3772f2a1d0c3ed0e5176e0d6d4c9942e16307e1dd954d",
+    "proc-status.txt": "54650d02f8ddcbe40934b3883a04e8a6ba901671132a26b6a686aa84c3ce915e",
+    "signal-stress.json": "4e269701c53059c0c5732e22c1b50d46019f43928d829771c7a254336bee3647",
+    "toolchain-baseline.json": "9a765d8eda4a734f7252a33260eb5f1b691fc92f7d351a3ba0f476d84e171fc3",
+    "verification.txt": "7df8f187e24f76d88a8941290ae1622ab34087a3b7ca317233a888b779bfd0f4"
+  },
+  "experiment": "RF-A0-HARDENING",
+  "failure": null,
+  "milestone": "RF-A0",
+  "post_run": {
+    "project_state_sha256": "f7806a304860e4ad697643a70566b9eee8fdf3cf583d2ff99cc35fc469abb1b2",
+    "source_tree_sha256": "7a56706bf838b6836f1e2f523bcd6405cd38ae43e93cd2a952418b032e34a83a"
+  },
+  "post_run_interpretation": "Generated checks preserve observations and bounded comparisons; authored learning remains a separate post-observation artifact.",
+  "pre_run": {
+    "commitment": "commitment.json",
+    "project_state_sha256": "f7806a304860e4ad697643a70566b9eee8fdf3cf583d2ff99cc35fc469abb1b2",
+    "source_tree_sha256": "7a56706bf838b6836f1e2f523bcd6405cd38ae43e93cd2a952418b032e34a83a"
+  },
+  "prediction_comparisons": [
+    {
+      "comparison": "SUPPORTED",
+      "protocol_id": "RF-A0-H01"
+    },
+    {
+      "comparison": "SUPPORTED",
+      "protocol_id": "RF-A0-H02"
+    },
+    {
+      "comparison": "SUPPORTED",
+      "protocol_id": "RF-A0-H03"
+    },
+    {
+      "comparison": "SUPPORTED",
+      "protocol_id": "RF-A0-H04"
+    },
+    {
+      "comparison": "SUPPORTED",
+      "protocol_id": "RF-A0-H05"
+    },
+    {
+      "comparison": "SUPPORTED",
+      "protocol_id": "RF-A0-H06"
+    },
+    {
+      "comparison": "SUPPORTED",
+      "protocol_id": "RF-A0-P01"
+    },
+    {
+      "comparison": "SUPPORTED",
+      "protocol_id": "RF-A0-P02"
+    },
+    {
+      "comparison": "SUPPORTED",
+      "protocol_id": "RF-A0-P03"
+    },
+    {
+      "comparison": "SUPPORTED",
+      "protocol_id": "RF-A0-P04"
+    },
+    {
+      "comparison": "SUPPORTED",
+      "protocol_id": "RF-A0-P05"
+    },
+    {
+      "comparison": "SUPPORTED",
+      "protocol_id": "RF-A0-P06"
+    }
+  ],
+  "previous_chain_hash": "696a1eaef66c1b44a8a8e6dabdbbb4d0ca451947db661c3aa10a819a3b56ca16",
+  "protocol_sha256": "cba33aabff5e45d499f097bac16bda6fb33cef5add32924d906be89bda074e40",
+  "raw_evidence": [
+    "action-build.txt",
+    "action-cmake-version.txt",
+    "action-configure.txt",
+    "action-ctest.txt",
+    "action-git-diff-check.txt",
+    "action-git-head.txt",
+    "action-git-remote.txt",
+    "action-git-status.txt",
+    "action-praxis-validator.txt",
+    "action-runtime-observation.txt",
+    "analysis.md",
+    "commitment.json",
+    "gate-results.json",
+    "launcher-cgroup.txt",
+    "launcher-ns.txt",
+    "observation.json",
+    "platform-baseline.json",
+    "praxis-validator.json",
+    "probe-stderr.txt",
+    "probe-stdout.txt",
+    "proc-cgroup.txt",
+    "proc-fd.txt",
+    "proc-maps.txt",
+    "proc-mountinfo.txt",
+    "proc-net-tcp-listener.txt",
+    "proc-ns.txt",
+    "proc-status.txt",
+    "signal-stress.json",
+    "toolchain-baseline.json",
+    "verification.txt"
+  ],
+  "result": "PASS",
+  "run_id": "20260815T165145.875757Z-cba33aabff5e",
+  "unexpected_observations": [],
+  "validation": "gate-results.json"
+}

@@ -34,3 +34,9 @@ See [Project foundation](docs/project-foundation.md), [RF-A0 experiment](docs/rf
 [hardening synthesis](docs/rf-a0-hardening-synthesis.md), the fixed
 [pre-observation protocol](.hoa/protocols/rf-a0-pre-observation.json), and the
 separate project-local [post-observation learning](.hoa/learning/rf-a0.json).
+
+## Premissas de desenvolvimento
+
+**Simples, leve. Sempre pronto. Sempre incompleto!**
+
+[Significado e símbolos das premissas](docs/sister-principles/README.md).
